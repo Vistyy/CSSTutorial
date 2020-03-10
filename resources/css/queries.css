@@ -1,0 +1,75 @@
+/*---------------------------------------*/
+
+/*MEDIA QUERIES*/
+
+/*---------------------------------------*/
+
+/*--------BIG TABLET TO 1200PX (widths smaller than the 1140px row) (1024-1200px)--------*/
+
+@media only screen and (max-width: 1200px) {
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  header {
+    height: 35vh;
+  }
+
+  h1 {
+    font-size: 400%;
+  }
+
+  h3 {
+    font-size: 150%;
+  }
+
+  .tutorial-list-box {
+    margin: 0 7%;
+  }
+
+  .tutorial-list li {
+    margin: 0 8% 70px 0;
+    width: 42%;
+  }
+}
+
+/*--------SMALL TABLET TO BIG TABLET (768-1023px)--------*/
+
+@media only screen and (max-width: 1023px) {
+  .tutorial-list li {
+    width: 70%;
+    margin: 0 15% 60px 15%;
+  }
+
+  h1 {
+    font-size: 320%;
+  }
+
+  h3 {
+    font-size: 280%;
+  }
+}
+
+/*--------SMALLER THAN IPAD (481-767px)--------*/
+
+@media only screen and (max-width: 767px) {
+  header {
+    height: 20vh;
+  }
+  h1 {
+    font-size: 220%;
+  }
+  h3 {
+    font-size: 170%;
+  }
+  .tutorial-list-box {
+    margin: 0 4%;
+  }
+  .tutorial-list li {
+    margin: 0 10% 40px 10%;
+    width: 80%;
+  }
+}
