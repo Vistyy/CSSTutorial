@@ -47,12 +47,12 @@ h3 {
 /*---------------------------------------*/
 
 header {
-  height: 40vh;
+  height: 30vh;
   position: relative;
 }
 .title {
   position: absolute;
-  top: 40%;
+  top: 30%;
   left: 15%;
 }
 
