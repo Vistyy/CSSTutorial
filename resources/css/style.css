@@ -83,8 +83,13 @@ header {
 .tutorial-list h3 {
   position: absolute;
   text-align: center;
-  /* width: 100%; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: transform 0.5s;
+}
+
+.tutorial-list h3:hover {
+  transition: transform 0.5s;
+  transform: translate(-50%, -50%) scale(1.5);
 }
