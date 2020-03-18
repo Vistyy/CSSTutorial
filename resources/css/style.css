@@ -29,6 +29,30 @@ body {
   box-shadow: 0 0 30px 3px black;
   position: relative;
 }
+/* logging in  */
+.loginwindow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  position: sticky;
+  height: auto;
+  max-height: 500px;
+  overflow: hidden;
+  transition:max-height 2s ease-out;
+}
+.collapsed{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgray;
+  position: sticky;
+  height: auto;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 1s ease-in;
+}
+
 
 .content-wrap {
   padding-bottom: 2.5rem;

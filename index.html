@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -5,12 +6,14 @@
     <link rel="stylesheet" type="text/css" href="vendors/css/grid.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="resources/windows.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap"
       rel="stylesheet"
     />
 
-    <title>beniz</title>
+    <title>Programming tutorial</title>
   </head>
   <body>
     <div class="main-container">
@@ -19,7 +22,7 @@
           <nav>
             <div class="clearfix">
               <ul class="main-nav">
-                <li><a href="#sign-in">Sign In</a></li>
+                <li><a href="#sign-in" onclick="test()">Sign In</a></li>
                 <li><a href="#sign-up">Sign Up</a></li>
               </ul>
             </div>
@@ -28,6 +31,15 @@
             <h1>CSS Tutorials</h1>
           </div>
         </header>
+        <div class="collapsed" id="login-window">
+          <form action="" method="post">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" name="username" id="username">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            <input type="password" name="pass" id="pass">
+            <button type="submit">Send</button>
+          </form>
+        </div>
         <div class="tutorial-list-box">
           <h2>Tutorial List</h2>
           <ul class="tutorial-list clearfix">
