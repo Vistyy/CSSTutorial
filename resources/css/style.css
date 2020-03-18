@@ -12,13 +12,26 @@
 
 html,
 body {
-  background-color: rgb(39, 39, 39);
-  color: rgb(202, 202, 202);
+  background-color: rgb(70, 70, 70);
+  color: rgb(33, 33, 33);
   font-family: Lato, Arial, sans-serif;
   font-size: 20px;
   font-weight: 300;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
+}
+
+.main-container {
+  background-color: white;
+  min-height: 100vh;
+  height: auto;
+  margin: 0 10%;
+  box-shadow: 0 0 30px 3px black;
+  position: relative;
+}
+
+.content-wrap {
+  padding-bottom: 2.5rem;
 }
 
 .clearfix {
@@ -32,7 +45,7 @@ body {
 }
 
 h1 {
-  font-size: 550%;
+  font-size: 500%;
   font-weight: 300;
 }
 
@@ -47,8 +60,10 @@ h3 {
 /*---------------------------------------*/
 
 header {
-  height: 30vh;
+  height: 22vh;
   position: relative;
+  background-color: rgb(96, 184, 235);
+  box-shadow: 0 10px 20px -10px rgb(8, 100, 153);
 }
 .title {
   position: absolute;
@@ -58,7 +73,8 @@ header {
 
 .tutorial-list-box {
   position: relative;
-  margin: 0 15%;
+  margin: 0 18%;
+  margin-top: 100px;
 }
 
 .tutorial-list-box h2 {
@@ -89,7 +105,57 @@ header {
   transition: transform 0.5s;
 }
 
-.tutorial-list h3:hover {
+.tutorial-list a:hover h3 {
   transition: transform 0.5s;
   transform: translate(-50%, -50%) scale(1.5);
+}
+/*---------------------------------------*/
+
+/*MAIN NAVIGATION BAR*/
+
+/*---------------------------------------*/
+
+.main-nav {
+  float: right;
+  list-style-type: none;
+  margin: 30px 30px 30px 0px;
+  margin-bottom: 10px;
+}
+.main-nav li {
+  display: inline-block;
+  margin-left: 35px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+  padding: 8px 0;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active {
+  border-bottom: 2px solid rgb(8, 100, 153);
+}
+
+/*---------------------------------------*/
+
+/*FOOTER*/
+
+/*---------------------------------------*/
+
+footer {
+  background-color: #333;
+  color: #aaa;
+  padding: 50px;
+  font-size: 80%;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
 }
