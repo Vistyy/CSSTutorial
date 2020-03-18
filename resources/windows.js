@@ -5,5 +5,8 @@ function test(){
     }else{
         el.className = "collapsed";
     }
-    
+}
+
+function submit(){
+    document.getElementById("loginform").submit();
 }
