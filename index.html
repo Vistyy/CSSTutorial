@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="resources/windows.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap"
@@ -16,13 +17,13 @@
     <title>Programming tutorial</title>
   </head>
   <body>
-    <div class="main-container">
+    <div class="main-container" id="main-container">
       <div class="content-wrap">
         <header>
           <nav>
             <div class="clearfix">
               <ul class="main-nav">
-                <li onclick="test()">Sign In</a></li>
+                <li onclick="test()"><a href="#sign-in">Sign In</a></li>
                 <li><a href="#sign-up">Sign Up</a></li>
               </ul>
             </div>
@@ -31,17 +32,6 @@
             <h1>CSS Tutorials</h1>
           </div>
         </header>
-        <div class="collapsed" id="login-window">
-          <form action="resources/sign-in.php" method="post" id="loginform" >
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <input type="text" name="username" id="username">
-            <i class="fa fa-lock" aria-hidden="true"></i>
-            <input type="password" name="pass" id="pass">
-            <i class="fa fa-arrow-right" aria-hidden="true" onclick="submit()" > </i>
-            <input type="submit" value="">
-            </button>
-          </form>
-        </div>
         <div class="tutorial-list-box">
           <h2>Tutorial List</h2>
           <ul class="tutorial-list clearfix">
@@ -93,6 +83,25 @@
         </div>
       </div>
       <footer>stuff to type in here, copyrightedtm</footer>
+    </div>
+    <div class="collapsed" id="login-window">
+      <i class="fa fa-times" onclick="test()" id="close-btn"></i>
+      <h3>sign in</h3>
+      <form action="resources/sign-in.php" method="post" id="loginform" class="clearfix">
+        <div>
+          <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" name="username" id="username" placeholder="Username">
+      </div>
+        <div>
+          <i class="fa fa-lock" aria-hidden="true"></i>
+        <input type="password" name="pass" id="pass" placeholder="Password">
+      </div>
+      <div>
+        <!-- <i class="fa fa-arrow-right" aria-hidden="true" onclick="submit()" > </i> -->
+        <input type="submit" value="sign in" id="submit">
+        </button>
+      </div>
+      </form>
     </div>
   </body>
 </html>
