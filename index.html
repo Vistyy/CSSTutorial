@@ -17,14 +17,14 @@
     <title>Programming tutorial</title>
   </head>
   <body>
-    <div class="main-container" id="main-container">
+    <div class="main-container" id="main-container" onclick="delet();">
       <div class="content-wrap">
         <header>
           <nav>
             <div class="clearfix">
               <ul class="main-nav">
-                <li onclick="test()"><a href="#sign-in">Sign In</a></li>
-                <li><a href="#sign-up">Sign Up</a></li>
+                <li onclick="test('signin')"><a id="signin-btn" href="#sign-in">Sign In</a></li>
+                <li onclick="test('signup')"><a id="signup-btn" href="#sign-up">Sign Up</a></li>
               </ul>
             </div>
           </nav>
@@ -32,7 +32,7 @@
             <h1>CSS Tutorials</h1>
           </div>
         </header>
-        <div class="tutorial-list-box">
+        <div class="tutorial-list-box" id="tutorial-list-box">
           <h2>Tutorial List</h2>
           <ul class="tutorial-list clearfix">
             <li>
@@ -84,21 +84,44 @@
       </div>
       <footer>stuff to type in here, copyrightedtm</footer>
     </div>
-    <div class="collapsed" id="login-window">
-      <i class="fa fa-times" onclick="test()" id="close-btn"></i>
+    <div class="signincollapsed" id="signin-window">
+      <i class="fa fa-times" onclick="test('signin')" id="close-btn"></i>
       <h3>sign in</h3>
-      <form action="resources/sign-in.php" method="post" id="loginform" class="clearfix">
+      <form action="resources/sign-in.php" method="post" id="signinform" class="clearfix">
         <div>
           <i class="fa fa-user" aria-hidden="true"></i>
-        <input type="text" name="username" id="username" placeholder="Username">
+        <input type="text" name="username" id="signin-username" placeholder="Username">
       </div>
         <div>
           <i class="fa fa-lock" aria-hidden="true"></i>
-        <input type="password" name="pass" id="pass" placeholder="Password">
+        <input type="password" name="pass" id="signin-pass" placeholder="Password">
       </div>
       <div>
         <!-- <i class="fa fa-arrow-right" aria-hidden="true" onclick="submit()" > </i> -->
-        <input type="submit" value="sign in" id="submit">
+        <input type="submit" value="sign in" id="signin-submit">
+        </button>
+      </div>
+      </form>
+    </div>
+    <div class="signupcollapsed" id="signup-window">
+      <i class="fa fa-times" onclick="test('signup')" id="close-btn"></i>
+      <h3>sign up</h3>
+      <form action="resources/sign-up.php" method="post" id="signupform" class="clearfix">
+        <div>
+          <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" name="username" id="signup-username" placeholder="Username">
+      </div>
+        <div>
+          <i class="fa fa-lock first-lock" aria-hidden="true"></i>
+        <input type="password" name="pass" id="signup-pass" placeholder="Password">
+      </div>
+        <div>
+          <i class="fa fa-lock second-lock" aria-hidden="true"></i>
+          <input type="password" name="pass2" id="signup-pass2" placeholder="Confirm Password">
+      </div>
+      <div>
+        <!-- <i class="fa fa-arrow-right" aria-hidden="true" onclick="submit()" > </i> -->
+        <input type="submit" value="sign up" id="signup-submit" onclick="submit()">
         </button>
       </div>
       </form>

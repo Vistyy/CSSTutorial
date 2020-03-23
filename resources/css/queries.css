@@ -4,35 +4,82 @@
 
 /*---------------------------------------*/
 
-/*--------BIG TABLET TO 1200PX (widths smaller than the 1140px row) (1024-1200px)--------*/
-
-@media only screen and (max-width: 1200px) {
-  /* .title {
+/* SCREEN TO 1600PX (1600PX-1920PX) */
+@media only screen and (max-width: 1920px) {
+  header {
+    height: 20vh;
+  }
+  .title {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  } */
+    top: 35%;
+    left: 13%;
+    /* transform: translate(-50%, -50%); */
+  }
+  .tutorial-list-box {
+    margin-left: 8%;
+    margin-right: 8%;
+  }
+}
 
+/* SCREEN TO 1600PX (1200PX-1600PX) */
+@media only screen and (max-width: 1600px) {
+  header {
+    height: 19vh;
+  }
+  .title {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    /* transform: translate(-50%, -50%); */
+  }
+  .tutorial-list-box {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
   h1 {
-    font-size: 420%;
+    font-size: 530%;
   }
 
-  h3 {
-    font-size: 250%;
+  .tutorial-list a:hover h3 {
+    transform: translate(-50%, -50%) scale(1.25);
+  }
+}
+/*--------BIG TABLET TO 1200PX (widths smaller than the 1140px row) (1024-1200px)--------*/
+@media only screen and (max-width: 1200px) {
+  .title {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    /* transform: translate(-50%, -50%); */
+  }
+
+  header {
+    min-height: 7rem;
+    height: 17vh;
+  }
+
+  h1 {
+    font-size: 520%;
+  }
+
+  .tutorial-list h3 {
+    font-size: 180%;
   }
 
   .tutorial-list-box {
-    margin-left: 7%;
-    margin-right: 7%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 
   .tutorial-list li {
-    margin: 0 8% 70px 0;
+    margin: 0 4% 70px 4%;
     width: 42%;
   }
   .main-container {
     margin: 0 7%;
+  }
+  .tutorial-list a:hover h3 {
+    transform: translate(-50%, -50%) scale(1.4);
   }
 }
 
@@ -41,7 +88,7 @@
 @media only screen and (max-width: 1023px) {
   .title {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 40%;
     transform: translate(-50%, -50%);
   }
@@ -51,10 +98,10 @@
   }
 
   h1 {
-    font-size: 340%;
+    font-size: 480%;
   }
 
-  h3 {
+  .tutorial-list h3 {
     font-size: 280%;
   }
 
@@ -78,7 +125,7 @@
   h1 {
     font-size: 240%;
   }
-  h3 {
+  .tutorial-list h3 {
     font-size: 190%;
   }
   .tutorial-list-box {

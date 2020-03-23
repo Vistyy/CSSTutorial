@@ -45,7 +45,7 @@ body {
 }
 
 h1 {
-  font-size: 500%;
+  font-size: 580%;
   font-weight: 300;
 }
 
@@ -60,6 +60,7 @@ h3 {
 /*---------------------------------------*/
 
 header {
+  min-height: 9rem;
   height: 22vh;
   position: relative;
   background-color: rgb(96, 184, 235);
@@ -68,12 +69,12 @@ header {
 .title {
   position: absolute;
   top: 30%;
-  left: 15%;
+  left: 18%;
 }
 
 .tutorial-list-box {
   position: relative;
-  margin: 0 18%;
+  margin: 0 15%;
   margin-top: 100px;
 }
 
@@ -87,7 +88,7 @@ header {
   float: left;
   width: 40%;
   height: auto;
-  margin: 0 10% 80px 0;
+  margin: 0 5% 80px 5%;
   position: relative;
 }
 
@@ -103,17 +104,17 @@ header {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
 }
 
 .tutorial-list a:hover h3 {
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
   -webkit-transform: translate(-50%, -50%) scale(1.5);
   transform: translate(-50%, -50%) scale(1.5);
 }
@@ -157,16 +158,14 @@ header {
 
 /*---------------------------------------*/
 
-.loginwindow {
+.signinwindow,
+.signupwindow {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #eee;
   position: fixed;
   height: auto;
-  max-height: 500px;
-  min-width: 15em;
-  min-height: 20rem;
   overflow: hidden;
   transition: max-height 1s ease-out;
   left: 50%;
@@ -179,7 +178,19 @@ header {
   box-shadow: 0 0 10px 0;
   animation: popUp 0.3s ease-out 0ms;
 }
-.collapsed {
+
+.signinwindow {
+  max-height: 500px;
+  min-width: 15em;
+  min-height: 20rem;
+}
+.signupwindow {
+  max-height: 500px;
+  min-width: 16em;
+  min-height: 22rem;
+}
+.signincollapsed,
+.signupcollapsed {
   display: none;
   align-items: center;
   justify-content: center;
@@ -218,17 +229,27 @@ header {
   transition: 0.2s;
 }
 
-#loginform {
+#signinform,
+#signupform {
   margin-top: 50px;
 }
 
-#loginform input {
+#signinform input,
+#signupform input {
   border-radius: 0.3rem;
   font-size: 90%;
+}
+
+#signinform input::placeholder,
+#signupform input::placeholder {
   text-transform: capitalize;
 }
-#username,
-#pass {
+#signin-username,
+#signin-pass,
+#signin-pass2,
+#signup-username,
+#signup-pass,
+#signup-pass2 {
   margin-bottom: 15px;
   padding-left: 9px;
   padding-top: 9px;
@@ -238,40 +259,76 @@ header {
   padding-right: 25px;
 }
 
-#submit {
+#signin-username,
+#signup-username {
+  margin-bottom: 25px;
+}
+
+#signin-submit,
+#signup-submit {
   float: right;
   border: solid 2px rgb(8, 100, 153);
   padding: 5px 10px 5px 10px;
   right: 10%;
   transition: 0.2s;
   margin-top: 10px;
+  text-transform: capitalize;
 }
 
-#submit:hover {
+#signin-submit:hover,
+#signup-submit:hover {
   background-color: rgb(8, 100, 153);
   color: #fff;
   transition: 0.2s;
 }
 
-#loginform i {
+#signinform i,
+#signupform i {
   position: absolute;
-  right: 8%;
   pointer-events: none;
 }
 
-#login-window h3 {
+#signinform i {
+  right: 8%;
+}
+
+#signupform i {
+  right: 11%;
+}
+
+#signin-window h3,
+#signup-window h3 {
   position: absolute;
-  top: 17%;
-  left: 6%;
   text-transform: capitalize;
 }
 
-.fa-user {
-  top: 39%;
+#signin-window h3 {
+  top: 17%;
+  left: 6%;
 }
 
-.fa-lock {
-  top: 53%;
+#signup-window h3 {
+  top: 14%;
+  left: 8%;
+}
+
+#signin-window .fa-user {
+  top: 38%;
+}
+
+#signin-window .fa-lock {
+  top: 54%;
+}
+
+#signup-window .fa-user {
+  top: 33%;
+}
+
+#signup-window .first-lock {
+  top: 47.5%;
+}
+#signup-window .second-lock {
+  top: 60%;
 }
 
 /*---------------------------------------*/
