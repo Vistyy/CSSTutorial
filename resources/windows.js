@@ -44,3 +44,14 @@ function delet() {
     document.getElementById("tutorial-list-box").removeAttribute("style");
   }
 }
+
+//modal
+
+window.onload = function () {
+    document.getElementById('button').addEventListener("click", function () {
+        document.querySelector('.bg-modal').style.display = "flex";
+    });
+    document.querySelector('.close').addEventListener("click", function () {
+        document.querySelector('.bg-modal').style.display = "none";
+    })
+}
