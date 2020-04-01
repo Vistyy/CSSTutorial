@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="resources/windows.js"></script>
+    <script src="resources/js/windows.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap"
       rel="stylesheet"
@@ -15,12 +15,12 @@
     <title>Programming tutorial</title>
   </head>
   <body>
-    <div class="main-container" id="main-container" onclick="delet();">
+    <div class="main-container" id="main-container" onclick="delet()">
       <div class="content-wrap">
         <header>
           <nav>
             <div class="clearfix">
-              <ul class="main-nav">
+              <ul class="main-nav" id="main-nav">
                 <li onclick="test('signin')"><a id="signin-btn" href="#sign-in">Sign In</a></li>
                 <li onclick="test('signup')"><a id="signup-btn" href="#sign-up">Sign Up</a></li>
               </ul>
@@ -32,9 +32,9 @@
         </header>
         <div class="tutorial-list-box" id="tutorial-list-box">
           <h2>Tutorial List</h2>
-          <ul class="tutorial-list clearfix">
+          <ul class="tutorial-list clearfix" id="tutorial-list">
             <li>
-              <figure class="box-animations">
+              <figure class="box-animations" onclick="tutorialPopUp('Animations');showSlides()" >
                 <a href="#animations" id="button">
                   <h3>Animations</h3>
                   <img
@@ -45,7 +45,7 @@
               </figure>
             </li>
             <li>
-              <figure class="box-flexbox">
+              <figure class="box-flexbox" onclick="tutorialPopUp('Flexbox');showSlides()">
                 <a href="#flexbox">
                   <h3>Flexbox</h3>
                   <img
@@ -56,7 +56,7 @@
               </figure>
             </li>
             <li>
-              <figure class="box-media-queries">
+              <figure class="box-media-queries" onclick="tutorialPopUp('MediaQueries');showSlides()">
                 <a href="#media-queries">
                   <h3>Media Queries</h3>
                   <img
@@ -67,7 +67,7 @@
               </figure>
             </li>
             <li>
-              <figure class="box-text-effects">
+              <figure class="box-text-effects" onclick="tutorialPopUp('TextEffects');showSlides()">
                 <a href="#text-effects">
                   <h3>Text Effects</h3>
                   <img
@@ -82,6 +82,11 @@
       </div>
       <footer>stuff to type in here, copyrightedtm</footer>
     </div>
+    <div class="collapsed slideshow-container" id="slideshow-window">
+<a class="prev fa fa-angle-left" onclick="plusSlides(-1)"></a>
+<a class="next fa fa-angle-right" onclick="plusSlides(1)"></a>
+<i class="fa fa-times" onclick="tutorialPopUp()" id="close-btn"></i>
+</div>
     <div class="signincollapsed" id="signin-window">
       <i class="fa fa-times" onclick="test('signin')" id="close-btn"></i>
       <h3>sign in</h3>
@@ -124,21 +129,6 @@
       </div>
       </form>
     </div>
-<!-- MODAL-->
-    <div class="bg-modal">
-        <div class="modal-content">
-            <h3> CSS Animation</h3>
-            <p>
-                An animation lets an element gradually change from one style to another. 
-                You can change as many CSS properties you want, as many times you want.
-                To use CSS animation, you must first specify some keyframes for the animation. 
-                Keyframes hold what styles the element will have at certain times. 
-            </p>  
-            <div class="animation">
-            </div>
-            
-            <div class="close">+</div>
-        </div>
-    </div>
+    
   </body>
 </html>

@@ -72,6 +72,12 @@ header {
   left: 18%;
 }
 
+/*---------------------------------------*/
+
+/*TUTORIAL LIST*/
+
+/*---------------------------------------*/
+
 .tutorial-list-box {
   position: relative;
   margin: 0 15%;
@@ -117,6 +123,47 @@ header {
   transition: transform 0.35s, -webkit-transform 0.35s;
   -webkit-transform: translate(-50%, -50%) scale(1.5);
   transform: translate(-50%, -50%) scale(1.5);
+}
+
+/*---------------------------------------*/
+
+/*SLIDE SHOW*/
+
+/*---------------------------------------*/
+.slideshow-container {
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  /* margin: auto; */
+  background-color: #fff;
+  top: 40%;
+  left: 40%;
+  transform: translate(-40%, -40%);
+}
+
+.slides {
+  display: none;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 /*---------------------------------------*/
 
@@ -190,7 +237,8 @@ header {
   min-height: 22rem;
 }
 .signincollapsed,
-.signupcollapsed {
+.signupcollapsed,
+.collapsed {
   display: none;
   align-items: center;
   justify-content: center;
@@ -349,77 +397,82 @@ footer {
 }
 
 /*Modal*/
-.bg-modal{
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.7);
-    position: absolute;
-    top: 0;
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    display:none;
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  position: fixed;
+  min-height: 50vh;
+  height: auto;
+  min-width: 60vw;
+  overflow: hidden;
+  transition: max-height 1s ease-out;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  transition: transform 1s;
+  z-index: 9999;
+  border-radius: 0.5rem;
+  border: 0.2rem solid rgb(8, 100, 153);
+  box-shadow: 0 0 10px 0;
+  animation: popUp 0.3s ease-out 0ms;
+}
 
+.modal h3 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
 }
-.modal-content {
-    width: 60%;
-    height: 650px;
-    background-color: white;
-    opacity: 1;
-    border-radius: 6px;
-    text-align: center;
-    padding: 20px;
-    word-wrap: break-word;
-    padding: 5% 10%;
-    border-radius: 0.5rem;
-    border: 0.2rem solid rgb(8, 100, 153);
-    box-shadow: 0 0 10px 0;
-    animation: popUp 0.5s ease-out 1ms;
-    background-color: #eee;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    overflow: hidden;
-    transition: max-height 1s ease-out;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-    transition: transform 1s;
-}
-.input{
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-}
-.close{
-    position: absolute;
-    top:0;
-    right: 5%;
-    font-size:40px;
-    transform: rotate(45deg);
-    cursor: pointer;
 
+.modal p {
+  margin: 0 100px 0 100px;
+}
+
+.input {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 /*animation*/
-.animation{
-    width:100px;
-    height:100px;
-    background-color:red;
-    animation-name: example;
-    animation-duration: 5s;
-    animation-delay: 3s;
-    position:relative;
-    display:inline-block;    
-    animation-timing-function:linear;
-    animation-direction: alternate;
-    animation-iteration-count:infinite;
-    
-    
+.animation {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 3s;
+  position: relative;
+  display: inline-block;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
-@keyframes example{
-    0%   {background-color:red; left:0px; top:0px;}
-  25%  {background-color:yellow; left:200px; top:0px;}
-  50%  {background-color:blue; left:200px; top:200px;}
-  75%  {background-color:green; left:0px; top:200px;}
-  100% {background-color:red; left:0px; top:0px;}
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
 }
