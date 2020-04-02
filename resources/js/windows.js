@@ -90,36 +90,73 @@ function showSlides(n = 1) {
 }
 const markupAnimations = `
 <div class="slides">
-      <div>
-        <h3> CSS Animation</h3>
+      <div class="middle">
+        <h2> CSS Animation</h3>
+        <h3> Definition</h2>
       <p>
           An animation lets an element gradually change from one style to another. 
           You can change as many CSS properties you want, as many times you want.
           To use CSS animation, you must first specify some keyframes for the animation. 
-          Keyframes hold what styles the element will have at certain times. 
+</p>
+<p>
+          Keyframes hold what styles the element will have at certain times.
+          Each @keyframes at-rule defines what should happen at specific moments during the animation.
+          For example, 0% is the beginning of the animation and 100% is the end.
+          These keyframes can then be controlled either by the shorthand animation property,
+          or its eight sub-properties, to give more control over how those keyframes should be manipulated.
       </p>  
-      <div class="animation">
-      </div>
+     
     </div>
 </div>
 <div class="slides">
-      <div>
-        <h3> CSS Animation</h3>
-      <p>
-          2 
-      </p>  
-      <div class="animation">
+      <div class="middle">
+        <h2> CSS Animation</h2>
+        <h3>Creating an object</h3>
+        <code>
+<br>
+        <pre>.animation {
+    <i>---The element to apply to----- </i>
+    width: 100px;
+    height: 100px;
+
+    <i>---Setting properties of animation---</i>
+
+    background-color: red;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    position: relative;
+    display: inline-block;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+        </code>
+        </pre>
       </div>
+      </p>  
+     
     </div>
 </div>
 <div class="slides">
-      <div>
-        <h3> CSS Animation</h3>
-      <p>
-          3 
-      </p>  
-      <div class="animation">
-      </div>
+      <div class="middle">
+       
+        <h2>CSS Animation</h2>
+        <h3>KeyFrames</h3>
+<br>
+        <pre>@keyframes example {
+    0% {background-color: red;
+        left: 0px;}
+
+    50% {background-color: yellow;
+        left: 20%;}
+
+    100% {background-color: blue;
+        left: 40%;}
+
+        </pre>
+        <div class="animation">
+     
     </div>
 </div>`;
 const markupFlexbox = `
