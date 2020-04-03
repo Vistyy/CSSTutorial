@@ -558,7 +558,7 @@ footer {
     align-items: baseline;
     justify-content: center;
     text-align: center;
-    position: fixed;
+    margin-left:20px;
 }
 
 .example-flex1,
