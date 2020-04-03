@@ -473,7 +473,7 @@ footer {
 
 /*---------------------------------------*/
   
-  .flex-container{
+.flex-container{
     display:flex;
     height: auto;
     width: auto;
@@ -481,10 +481,9 @@ footer {
     position: center;
     padding-top: 20px;
     padding-bottom: 30px;
-    align-self:center;
-    
-    
+    align-self:center;    
 }
+  
 .image{
     padding-top: 30px;
     padding-bottom: 30px;
@@ -493,18 +492,15 @@ footer {
     margin-right: auto;
 }
 
-.flexi {
-    
+.flexi{    
     height: auto;
     width: 100%;
     word-wrap: break-word;
     display:inline-block;
     padding-bottom: 30px;
-    padding-right: 40px;
-    
+    padding-right: 40px;    
 }
-  
-  .example-container {
+.example-container{
     background-color: rgb(96, 184, 235);
     width: 300px;
     height: 400px;
@@ -515,7 +511,6 @@ footer {
    justify-content:center;
    text-align:center;
    position:fixed;
-
 }
 .example-flex1,
 .example-flex2,
@@ -526,19 +521,17 @@ footer {
     text-align: center;
     align-items:baseline;
     margin-top: 20px;
-
 }
+  
 .example-flex1{
     width:100px;
     height:250px;
     color: azure;
     font-size: 30px;
     order:2;
-    flex-wrap:nowrap;
-
-
-    
+    flex-wrap:nowrap;    
 }
+  
 .example-flex2 {
     width: 100px;
     height: 150px;
