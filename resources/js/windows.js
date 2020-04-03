@@ -251,80 +251,71 @@ const markupFlexbox = `
             <h3>Example</h3> <br>
                 <div style="display:flex"/>
                     <div class="example-code"/>
-                    <code><i>--Creating containers and items (HTML)--<i><br><br>
-                        div class="example-container"><br>
-                        div class="example-flex1">1/div><br>
-                        div class="example-flex1">2/div><br>
-                        div class="example-flex2">3/div><br>
-                        div class="example-flex3">4/div><br><br>
-                        <i>--CSS properties--</i>
-                        .example-container {
-                                background-color: rgb(96, 184, 235);
-                                width: 300px;
-                                height: 400px;
-                                display:flex;
-                                flex-wrap:wrap;
-                               align-content:flex-start;
-                               align-items:baseline;
-                               justify-content:center;
-                               text-align:center;
+                    <pre><i>--Creating containers and items (HTML)--<i><br><br>
+div class="example-container"><br>
+div class="example-flex1">1/div><br>
+div class="example-flex1">2/div><br>
+div class="example-flex2">3/div><br>
+div class="example-flex3">4/div><br><br>
+<i>--CSS properties--</i>
+.example-container {
+background-color: rgb(96, 184, 235);
+width: 300px;
+height: 400px;
+display:flex;
+flex-wrap:wrap;
+align-content:flex-start;
+align-items:baseline;
+justify-content:center;
+text-align:center;
+}
+.example-flex1,
+.example-flex2,
+.example-flex3{
+display: flex;
+flex-direction: column;
+background-color: #333;
+text-align: center;
+align-items:baseline;
+margin-top: 20px;
+}
+.example-flex1{
+width:100px;
+height:250px;
+color: azure;
+font-size: 30px;
+order:2;
+flex-wrap:nowrap;
+}
+.example-flex2 {
+width: 100px;
+height: 150px;
+color: azure;
+font-size: 30px;
+order: 4;
+flex-wrap: nowrap;
+}
+.example-flex3 {
+display: flex;
+width: 50px;
+height: 50px;
+order: 3;
+color: beige;
+flex-direction: column;
+margin: 10px;
+}
+.example-flex4{
+width:300px;
+height:75px;
+background-color:darkslategray;
+order:1;
+display:flex;
+flex-direction:row;
+text-align:center;
+color:aquamarine;
+}
 
-                            }
-                            .example-flex1,
-                            .example-flex2,
-                            .example-flex3{
-                                display: flex;
-                                flex-direction: column;
-                                background-color: #333;
-                                text-align: center;
-                                align-items:baseline;
-                                margin-top: 20px;
-
-                            }
-                            .example-flex1{
-                                width:100px;
-                                height:250px;
-                                color: azure;
-                                font-size: 30px;
-                                order:2;
-                                flex-wrap:nowrap;
-
-
-    
-                            }
-                            .example-flex2 {
-                                width: 100px;
-                                height: 150px;
-                                color: azure;
-                                font-size: 30px;
-                                order: 4;
-                                flex-wrap: nowrap;
-                            }
-
-                            .example-flex3 {
-                                display: flex;
-                                width: 50px;
-                                height: 50px;
-                                order: 3;
-                                color: beige;
-                                flex-direction: column;
-                                margin: 10px;
-                            }
-
-                            .example-flex4{
-                                width:300px;
-                                height:75px;
-                                background-color:darkslategray;
-                                order:1;
-                                display:flex;
-                                flex-direction:row;
-                                text-align:center;
-                                color:aquamarine;
-                            }
-                        
-                        
-                    
-                    </code>
+</pre>
                     </div>
                     <div class="example-container">
                         <div class="example-flex1">1
