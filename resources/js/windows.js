@@ -159,36 +159,217 @@ const markupAnimations = `
      
     </div>
 </div>`;
+
+/*------FLEXBOX-------- */
+
 const markupFlexbox = `
 <div class="slides">
-<div>
-  <h3> CSS Flexbox</h3>
-<p>
-    blablabkalskgnenbfkwnbfmnsdbfwefbshbfhjsbdfjhdsbfjhsbfjhbsf 
-</p>  
-<div class="animation">
+    <div class="middle">
+      <h2>CSS Flexbox</h2>
+    <h3>Background</h3>
+    <p>
+    Flexbox provides more efficient way to lay out and distribute space among items in a container.
+    A flex container expands items to fill availavle free space or shrinks them to prevent overflow.
+    Normal layouts are vertically-based, but using flex you can set placeholders in horizontal order.    
+    Base construction of Flexbox is to divide on <b>flex container</b> and <b>flex item</b>. 
+    </p>
+    <div class="image"/>
+    <img src="https://www.tutorialrepublic.com/lib/images/flexbox-illustration.png"/>
+    </div>
+    
+    </div>
+</div>
+<div class="slides">
+       <div class="middle">
+            <h2>CSS Flexbox</h2>
+         <div class="flex-container">
+            
+                <div class="flexi">
+                    <h3>FLEX CONTAINER</h3> properties: <br>
+                    <code>
+        <br>
+        <b>display: flex; </b> <br>
+        <i>--Defines a flex container,
+        enables context for all inherited entities--</i>
+        <br><br>
+        <b>flex-direction: row|
+        row-reverse | column | 
+        column-reverse; </b><br>
+        <i>--Establishes main axis of direction flex items that are placed
+        in the flex container. Sets items in horizontal rows or vertical columns.--</i><br><br>
+
+        <br>
+        <b>justify-content</b><br>
+        <i>--Defines the alignment along the main axis.
+        Helps distribute extra free space, exerts some 
+        control over the alignment of items when they overflow 
+        the line.-- <br><br>
+        </i>
+        <b>align-items: stretch | flex-start | flex-end | center | baseline | </b> <br>
+        <i>Defines how items are laid out horizontally on the current line </i> <br><br>
+        <b>align-content</b> <br>
+        <i>--affects only when there is one line of flex items, has properties similar
+        to justify-content--</i>
+
+
+                    </code>
+                </div>
+         <div class="flexi">
+                    <h3>FLEX ITEM</h3> properties: <br> <br>
+                    <code>
+                        <b>order: (integer)</b> <br>
+                        <i>--By default, items are in the source order, with order property,
+                        apperance order might me controled.--</i><br><br>
+
+                        <b>flex-grow: (number);</b>
+                        <i>--Defines the abilirt for flex to grow if necessary, dictates
+                        what amount of available space inside container the item should take up.
+                        If one of the children has value of 2, the remaining space would take up twice
+                        as much space as the oders.--</i><br><br>
+
+                        <b>flex-shirnk: (number)</b> <br>
+                        <i>Defines the ability for a flex item to shrink if necessary.</i><br><br>
+                        <b>flex basis</b><br>
+                        <i>--defines the default size of an element before remaining space is distributed.
+                        If is set to 0, the extra space around the content would not be factored in.--</i><br><br>
+
+                        <b>flex: none | [<'flex-grow'> <'flex-shrink'>? || <'flex-basis'>] </b> <br>
+                        <i>--This is shorthand of flex-grow -shrink and -basis combined. It is recomended
+                        to use this formula than set ither properties individually. Also values
+                        of properties in this case are set intelligently.--</i>
+                            
+                        
+                    </code>
+                </div>
+    </div>
 </div>
 </div>
+<div class="slides">
+        <div class="middle">
+          <h2>CSS Flexbox</h2>
+            <h3>Example</h3> <br>
+                <div style="display:flex"/>
+                    <div class="example-code"/>
+                    <code><i>--Creating containers and items (HTML)--<i><br><br>
+                        div class="example-container"><br>
+                        div class="example-flex1">1/div><br>
+                        div class="example-flex1">2/div><br>
+                        div class="example-flex2">3/div><br>
+                        div class="example-flex3">4/div><br><br>
+                        <i>--CSS properties--</i>
+                        .example-container {
+                                background-color: rgb(96, 184, 235);
+                                width: 300px;
+                                height: 400px;
+                                display:flex;
+                                flex-wrap:wrap;
+                               align-content:flex-start;
+                               align-items:baseline;
+                               justify-content:center;
+                               text-align:center;
+
+                            }
+                            .example-flex1,
+                            .example-flex2,
+                            .example-flex3{
+                                display: flex;
+                                flex-direction: column;
+                                background-color: #333;
+                                text-align: center;
+                                align-items:baseline;
+                                margin-top: 20px;
+
+                            }
+                            .example-flex1{
+                                width:100px;
+                                height:250px;
+                                color: azure;
+                                font-size: 30px;
+                                order:2;
+                                flex-wrap:nowrap;
+
+
+    
+                            }
+                            .example-flex2 {
+                                width: 100px;
+                                height: 150px;
+                                color: azure;
+                                font-size: 30px;
+                                order: 4;
+                                flex-wrap: nowrap;
+                            }
+
+                            .example-flex3 {
+                                display: flex;
+                                width: 50px;
+                                height: 50px;
+                                order: 3;
+                                color: beige;
+                                flex-direction: column;
+                                margin: 10px;
+                            }
+
+                            .example-flex4{
+                                width:300px;
+                                height:75px;
+                                background-color:darkslategray;
+                                order:1;
+                                display:flex;
+                                flex-direction:row;
+                                text-align:center;
+                                color:aquamarine;
+                            }
+                        
+                        
+                    
+                    </code>
+                    </div>
+                    <div class="example-container">
+                        <div class="example-flex1">1
+                        </div>
+                        <div class="example-flex2">2
+                        </div>
+                        <div class="example-flex3">3
+                        </div>
+                        <div class="example-flex4">4
+                        </div>
+                    </div>
+                </div>
+        
+    
+        </div>
 </div>`;
 const markupMediaQueries = `
 <div class="slides">
-<div>
-  <h3> CSS Media Queries</h3>
-<p>
-     klsdfnmklfdsmdslkfmsklfmslkmfls
-</p>  
-<div class="animation">
+    <div class="middle">
+      <h3> CSS Media Queries</h3>
+        
+    <p>
+         klsdfnmklfdsmdslkfmsklfmslkmfls
+    </p>  
+    <div class="animation">
+    </div>
+    </div>
 </div>
+<div class="slides">
 </div>
+<div class="slides">
 </div>`;
 const markupTextEffects = `
 <div class="slides">
-<div>
-  <h3> CSS Text Effects</h3>
-<p>
-    zostawcie łapke w du xd 
-</p>  
-<div class="animation">
+    <div>
+      <h3> CSS Text Effects</h3>
+    <p>
+        zostawcie łapke w du xd 
+    </p>  
+    <div class="animation">
+    </div>
+    </div>
+
+<div class="slides">
 </div>
+
+<div class="slides">
 </div>
 </div>`;
