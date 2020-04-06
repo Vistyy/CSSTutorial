@@ -618,3 +618,14 @@ footer {
     padding-right: 30px;
     padding-bottom: 30px;
 }
+.middle img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+    .slideshow-container {
+        background-color: rgb(96, 184, 235);
+    }
+}
