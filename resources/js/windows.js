@@ -335,18 +335,34 @@ color:aquamarine;
 const markupMediaQueries = `
 <div class="slides">
     <div class="middle">
-      <h3> CSS Media Queries</h3>
+      <h2> CSS Media Queries</h2>
+      <h3>Definition</h3>
+    <p> The @media rule, introduced in CSS2, made it possible to define different style rules for different media types. <br>
+        Media queries in CSS3 extended the CSS2 media types idea: <br>
+        Instead of looking for a type of device, they look at the capability of the device. <br>
         
-    <p>
-         klsdfnmklfdsmdslkfmsklfmslkmfls
-    </p>  
-    <div class="animation">
-    </div>
+        <img src="https://miro.medium.com/max/654/1*F2QXUmXXjE1kG_5Bb770Hg.png"/>
+    </p> 
+    
     </div>
 </div>
+
 <div class="slides">
-</div>
-<div class="slides">
+     <div class="middle"/>
+        <div class="media-example"/>
+            <h2>CSS Media Queries</h2>
+            <h3>Example</h3>
+            <p>It can be used for site for easier adaption on different devices.<br>
+               For specified width of screen it may appear differently.<br>
+               To create media query use <br><br> </p>
+                <code> @media screen and (max-width: 600px) { <br>
+                       .slideshow-container { <br>
+                       background-color: rgb(96, 184, 235);}} </code> <br><br>
+              In this case  if this window would be smaller than 600px its background color will change to blue.
+            
+        </div>
+    </div>
+
 </div>`;
 const markupTextEffects = `
 <div class="slides">
