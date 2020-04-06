@@ -629,3 +629,61 @@ footer {
         background-color: rgb(96, 184, 235);
     }
 }
+
+.overflow2 p:hover,
+.overflow1 p:hover{
+    overflow:visible;
+}
+.overflow1 p{
+    white-space: nowrap;
+    width: 200px;
+    border: 1px solid #000000;
+    overflow:hidden;
+    text-overflow:clip;
+    padding: 0px;
+}
+
+.overflow2 p{
+    padding: 0px;
+    white-space: nowrap;
+    width: 200px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #000000;
+    text-overflow:ellipsis;
+    
+}
+.overflow3{
+    padding:0px;
+    width: 140px;
+    border: 1px solid #000000;
+    word-break: keep-all;
+}
+.overflow4 {
+    padding: 0px;
+    width: 140px;
+    border: 1px solid #000000;
+    word-break: break-all;
+}
+.wordwrapping1{
+    width: 11em;
+    border: 1px solid #000000;
+
+}
+.wordwrapping2 {
+    width: 11em;
+    border: 1px solid #000000;
+    word-wrap: break-word;
+}
+.writingmode1{
+    writing-mode:horizontal-tb;
+    
+
+}
+.writingmode2 {
+   writing-mode:vertical-lr;
+    
+}
+.flexmodel{
+    display:flex;
+}
