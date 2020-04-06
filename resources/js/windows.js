@@ -366,18 +366,97 @@ const markupMediaQueries = `
 </div>`;
 const markupTextEffects = `
 <div class="slides">
-    <div>
-      <h3> CSS Text Effects</h3>
-    <p>
-        zostawcie łapke w du xd 
-    </p>  
-    <div class="animation">
-    </div>
-    </div>
-
-<div class="slides">
+    <div class="middle"/>
+      <h2>CSS Text Effects</h2>
+        <h3>Definition</h3>
+        <p>Text effects provides many options of styling the text and also an automated tools
+           to display content wich will be optimized along the webpage. <br>
+           But primarly and most often it is used to define look of the text. <br> <br>
+           Most common are following properties: <br>
+            <code>
+           -text-overflow <br>
+           -word-wrap <br>
+           -word-break <br>
+           -writing-mode
+            </code>
+        </p>  
+    </div>       
 </div>
 
 <div class="slides">
+    <div class="middle">
+        <h2>CSS Text Effects</h2>
+        <h3>Text-overflow</h3>
+        <p>Specifies how overflowed content that is not displayed should be signaled to the user. <br><br>
+            The followng paragraph contains <b>text-overflow: clip:</b>
+        </p>
+        
+            <div class="overflow1">
+            <p>This is some long text that will not fit in the box</p>
+            </div>
+                <br>
+            <p>The followng paragraph contains <b>text-overflow: ellipsis:</b>
+            <div class="overflow2">
+            <p>This is some long text that will not fit in the box</p>
+                <br>
+            </div>
+            <p>Both boxes contain <b>div:hover {overflow:visible}</b> to see entire text.</p>
+    </div>
 </div>
+
+<div class="slides">
+    <div class="middle">
+        <h2>CSS Text Effects</h2>
+        <h3>Text wrapping</h3>
+        <p>This property allows long words to be able to be broken and wrap onto the next line. If a word is too long
+            to fit within an area it expands outside.</p> <br>
+        <div class="wordwrapping1">
+            This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword.
+            The long word will break and wrap to the next line.
+        </div>
+            <br>
+        <p>This paraghraph contains <b>word-wrap</b> property.</p>
+        <div class="wordwrapping2">
+            This paragraph contains a very long word: thisisaveryveryveryveryveryverylongword.
+            The long word will break and wrap to the next line.
+        </div>
+    </div>
+</div>
+
+<div class="slides">
+    <div class="middle">
+        <h2>CSS Text Effects</h2>
+        <h3>Word breaking</h3>
+        <p>This property allows long words to be able to be broken and wrap onto the next line.
+           If it would not be used it will expand outside the box.<br><br>
+            The following paragraph contains <b>word:break: keep-all;</b></p>
+            <div class="overflow3">
+                <p>This paragraph contains some text. This line will-break-at-hyphens.</p>
+            </div>
+                <br>
+            <p>The following paragraph contains <b>word:break: break-all;</b></p>
+            <div class="overflow4">
+                <p>This paragraph contains some text. The lines will break at any character.</p>
+            </div>            
+    </div>
+</div>
+
+<div class="slides">
+    <div class="middle">
+        <h2>CSS Text Effects</h2>
+        <h3>Writing mode</h3>
+        <p>This paragraph specifies wheter lines of the text are laid out horizontally or vertically.</p><br>
+         <div class="flexmodel">
+            <div class="writingmode1">
+            <p>This text will be written horizontally.</p>
+            </div>
+            <div class="writingmode2">
+            <p>This one  will be written vertically.</p>
+            </div>
+         </div> 
+        
+    </div>
+</div>
+
 </div>`;
+
