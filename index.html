@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="height=device-height, 
+                      width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0, 
+                      user-scalable=no">
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,14 +18,14 @@
     <title>Programming tutorial</title>
   </head>
   <body>
-    <div class="main-container" id="main-container" onclick="delet()">
+    <div class="main-container" id="main-container" onclick="outsidePopUp()">
       <div class="content-wrap">
         <header>
           <nav>
             <div class="clearfix">
               <ul class="main-nav" id="main-nav">
-                <li onclick="test('signin')"><a id="signin-btn" href="#sign-in">Sign In</a></li>
-                <li onclick="test('signup')"><a id="signup-btn" href="#sign-up">Sign Up</a></li>
+                <li onclick="test('signin')"><a id="signin-btn">Sign In</a></li>
+                <li onclick="test('signup')"><a id="signup-btn">Sign Up</a></li>
               </ul>
             </div>
           </nav>
@@ -33,58 +36,50 @@
         <div class="tutorial-list-box" id="tutorial-list-box">
           <h2>Tutorial List</h2>
           <ul class="tutorial-list clearfix" id="tutorial-list">
-            <li>
-              <figure class="box-animations" onclick="tutorialPopUp('Animations');showSlides()" >
-                <a href="#animations" id="button">
+            <li class="list-animations">
+              <figure class="box-animations" onclick="tutorialPopUp('Animations', 3);showSlides()">
+                <a>
                   <h3>Animations</h3>
-                  <img
-                    src="http://icon-library.com/images/placeholder-image-icon/placeholder-image-icon-0.jpg"
-                    alt="placeholder"
-                  />
                 </a>
               </figure>
+              <a class="external" href="?tutorial=animations" target="_blank"><i class="fa fa-external-link"></i></a>
             </li>
-            <li>
-              <figure class="box-flexbox" onclick="tutorialPopUp('Flexbox');showSlides()">
-                <a href="#flexbox">
-                  <h3>Flexbox</h3>
-                  <img
-                    src="http://icon-library.com/images/placeholder-image-icon/placeholder-image-icon-0.jpg"
-                    alt="placeholder"
-                  />
+            <li class="list-flexbox">
+              <figure class="box-flexbox" onclick="tutorialPopUp('Flexbox', 3);showSlides()">
+                <a>
+                  <h3 id="normal-flex-title">Flexbox</h3>
+                  <h3 id="flex-title"><p>F</p><p>lex</p><p>box</p></h3>
                 </a>
               </figure>
+              <a class="external" href="#flexbox" target="_blank"><i class="fa fa-external-link"></i></a>
             </li>
-            <li>
-              <figure class="box-media-queries" onclick="tutorialPopUp('MediaQueries');showSlides()">
-                <a href="#media-queries">
+            <li class="list-media">
+              <figure class="box-media-queries" onclick="tutorialPopUp('MediaQueries', 2);showSlides()">
+                <a>
+                  <div class="moving-block"></div>
                   <h3>Media Queries</h3>
-                  <img
-                    src="http://icon-library.com/images/placeholder-image-icon/placeholder-image-icon-0.jpg"
-                    alt="placeholder"
-                  />
                 </a>
               </figure>
+              <a class="external" href="#mediaqueries" target="_blank"><i class="fa fa-external-link"></i></a>
             </li>
-            <li>
-              <figure class="box-text-effects" onclick="tutorialPopUp('TextEffects');showSlides()">
-                <a href="#text-effects">
+            <li class="list-text">
+              <figure class="box-text-effects" onclick="tutorialPopUp('TextEffects', 5);showSlides()">
+                <a>
                   <h3>Text Effects</h3>
-                  <img
-                    src="http://icon-library.com/images/placeholder-image-icon/placeholder-image-icon-0.jpg"
-                    alt="placeholder"
-                  />
                 </a>
               </figure>
+              <a class="external" href="#texteffects" target="_blank"><i class="fa fa-external-link"></i></a>
             </li>
           </ul>
         </div>
       </div>
       <footer>stuff to type in here, copyrightedtm</footer>
     </div>
-    <div class="collapsed slideshow-container" id="slideshow-window">
+    <div class="collapsed slideshow-container" id="slideshow-container">
+      <div class="slideshow-window" id="slideshow-window"></div>
 <a class="prev fa fa-angle-left" onclick="plusSlides(-1)"></a>
 <a class="next fa fa-angle-right" onclick="plusSlides(1)"></a>
+<div class="dot-container" id="dot-container"></div>
 <i class="fa fa-times" onclick="tutorialPopUp()" id="close-btn"></i>
 </div>
     <div class="signincollapsed" id="signin-window">

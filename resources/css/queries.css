@@ -15,10 +15,10 @@
     left: 13%;
     /* transform: translate(-50%, -50%); */
   }
-  .tutorial-list-box {
+  /* .tutorial-list-box {
     margin-left: 8%;
     margin-right: 8%;
-  }
+  } */
 }
 
 /* SCREEN TO 1600PX (1200PX-1600PX) */
@@ -38,10 +38,6 @@
   }
   h1 {
     font-size: 530%;
-  }
-
-  .tutorial-list a:hover h3 {
-    transform: translate(-50%, -50%) scale(1.25);
   }
 }
 /*--------BIG TABLET TO 1200PX (widths smaller than the 1140px row) (1024-1200px)--------*/
@@ -77,9 +73,6 @@
   }
   .main-container {
     margin: 0 7%;
-  }
-  .tutorial-list a:hover h3 {
-    transform: translate(-50%, -50%) scale(1.4);
   }
 }
 
