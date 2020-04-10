@@ -9,7 +9,9 @@
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="resources/js/windows.js"></script>
+    <script type="text/javascript" src="resources/js/windows.js"></script>
+    <script type="text/javascript" src="resources/js/slideshow.js"></script>
+    <script type="text/javascript" src="resources/js/replaceTemplate.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap"
       rel="stylesheet"
@@ -21,16 +23,14 @@
     <div class="main-container" id="main-container" onclick="outsidePopUp()">
       <div class="content-wrap">
         <header>
-          <nav>
-            <div class="clearfix">
+          <nav class="clearfix">
               <ul class="main-nav" id="main-nav">
                 <li onclick="test('signin')"><a id="signin-btn">Sign In</a></li>
                 <li onclick="test('signup')"><a id="signup-btn">Sign Up</a></li>
               </ul>
-            </div>
           </nav>
           <div class="title">
-            <h1>CSS Tutorials</h1>
+            <a href="/index.html" style="text-decoration: none;color: rgb(33, 33, 33);"><h1>CSS Tutorials</h1></a>
           </div>
         </header>
         <div class="tutorial-list-box" id="tutorial-list-box">
@@ -42,7 +42,7 @@
                   <h3>Animations</h3>
                 </a>
               </figure>
-              <a class="external" href="?tutorial=animations" target="_blank"><i class="fa fa-external-link"></i></a>
+              <a class="external" href="./resources/html/template.html?tutorial=animations"><i class="fa fa-external-link"></i></a>
             </li>
             <li class="list-flexbox">
               <figure class="box-flexbox" onclick="tutorialPopUp('Flexbox', 3);showSlides()">
@@ -51,7 +51,7 @@
                   <h3 id="flex-title"><p>F</p><p>lex</p><p>box</p></h3>
                 </a>
               </figure>
-              <a class="external" href="#flexbox" target="_blank"><i class="fa fa-external-link"></i></a>
+              <a class="external" href="./resources/html/template.html?tutorial=flexbox"><i class="fa fa-external-link"></i></a>
             </li>
             <li class="list-media">
               <figure class="box-media-queries" onclick="tutorialPopUp('MediaQueries', 2);showSlides()">
@@ -60,7 +60,7 @@
                   <h3>Media Queries</h3>
                 </a>
               </figure>
-              <a class="external" href="#mediaqueries" target="_blank"><i class="fa fa-external-link"></i></a>
+              <a class="external" href="./resources/html/template.html?tutorial=mediaqueries"><i class="fa fa-external-link"></i></a>
             </li>
             <li class="list-text">
               <figure class="box-text-effects" onclick="tutorialPopUp('TextEffects', 5);showSlides()">
@@ -68,7 +68,7 @@
                   <h3>Text Effects</h3>
                 </a>
               </figure>
-              <a class="external" href="#texteffects" target="_blank"><i class="fa fa-external-link"></i></a>
+              <a class="external" href="./resources/html/template.html?tutorial=texteffects"><i class="fa fa-external-link"></i></a>
             </li>
           </ul>
         </div>
