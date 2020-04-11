@@ -1,3 +1,6 @@
+<?php
+            session_start();
+            ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,7 +28,15 @@
         <header>
           <nav class="clearfix">
             <ul class="main-nav" id="main-nav">
-              <li class="nav-btn" onclick="test('signin')">
+            <?php
+            if(isset($_SESSION['username'])){
+                echo $_SESSION['username'];
+                ?>
+                <li ><a class="logout-btn" href="resources/sign-out.php" >Log Out</a></li>
+              <?php
+            }else{
+                ?>
+                <li class="nav-btn" onclick="test('signin')">
                 <a id="signin-btn">Sign In</a>
               </li>
               <li class="nav-btn" onclick="test('signup')">
@@ -36,8 +47,10 @@
 
               <!-- <li class="nav-btn">
                 <a class="navbar-username">username</a>
-              </li>
-              <li class="nav-btn"><a class="logout-btn">Log Out</a></li> -->
+              </li> -->
+              <?php
+            }
+            ?>
             </ul>
           </nav>
           <div class="title">
