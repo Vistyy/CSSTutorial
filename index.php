@@ -1,3 +1,6 @@
+<?php
+            session_start();
+            ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,7 +29,6 @@
           <nav class="clearfix">
             <ul class="main-nav" id="main-nav">
             <?php
-            session_start();
             if(isset($_SESSION['username'])){
                 echo $_SESSION['username'];
                 ?>
