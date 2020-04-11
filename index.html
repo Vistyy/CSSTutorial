@@ -25,8 +25,16 @@
         <header>
           <nav class="clearfix">
             <ul class="main-nav" id="main-nav">
-              <li onclick="test('signin')"><a id="signin-btn">Sign In</a></li>
-              <li onclick="test('signup')"><a id="signup-btn">Sign Up</a></li>
+              <li class="nav-btn" onclick="test('signin')">
+                <a id="signin-btn">Sign In</a>
+              </li>
+              <li class="nav-btn" onclick="test('signup')">
+                <a id="signup-btn">Sign Up</a>
+              </li>
+              <li class="hidden">
+                <a class="navbar-username hidden">username</a>
+              </li>
+              <li class="hidden"><a class="logout-btn hidden">Log Out</a></li>
             </ul>
           </nav>
           <div class="title">
@@ -49,6 +57,10 @@
                   <h3>Animations</h3>
                 </a>
               </figure>
+              <label class="completion-container">
+                <input type="checkbox" name="completion" id="completion" />
+                <span class="checkmark"></span>
+              </label>
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=animations"
@@ -69,6 +81,10 @@
                   </div>
                 </a>
               </figure>
+              <label class="completion-container">
+                <input type="checkbox" name="completion" id="completion" />
+                <span class="checkmark"></span>
+              </label>
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=flexbox"
@@ -85,6 +101,10 @@
                   <h3>Media Queries</h3>
                 </a>
               </figure>
+              <label class="completion-container">
+                <input type="checkbox" name="completion" id="completion" />
+                <span class="checkmark"></span>
+              </label>
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=mediaqueries"
@@ -100,6 +120,10 @@
                   <h3>Text Effects</h3>
                 </a>
               </figure>
+              <label class="completion-container">
+                <input type="checkbox" name="completion" id="completion" />
+                <span class="checkmark"></span>
+              </label>
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=texteffects"
