@@ -32,7 +32,8 @@
             if(isset($_SESSION['username'])){
                 echo $_SESSION['username'];
                 ?>
-                <li ><a class="logout-btn" href="resources/sign-out.php" >Log Out</a></li>
+                <li class="nav-btn"><a class="navbar-username">username</a></li> 
+                <li class="nav-btn"><a class="logout-btn" href="resources/sign-out.php" >Log Out</a></li>
               <?php
             }else{
                 ?>
@@ -41,14 +42,7 @@
               </li>
               <li class="nav-btn" onclick="test('signup')">
                 <a id="signup-btn">Sign Up</a>
-              </li>
-
-              <!-- wstawione z pliku php po zalogowaniu, zmienić klasę signin-btn i signup-btn na hidden albo usunąć-->
-
-              <!-- <li class="nav-btn">
-                <a class="navbar-username">username</a>
-              </li> -->
-              <?php
+              </li><?php
             }
             ?>
             </ul>
