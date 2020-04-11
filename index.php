@@ -28,32 +28,33 @@
         <header>
           <nav class="clearfix">
             <ul class="main-nav" id="main-nav">
-            <?php
+              <?php
             if(isset($_SESSION['username'])){
                 echo $_SESSION['username'];
                 ?>
-<<<<<<< HEAD
-                <li class="nav-btn"><a class="navbar-username">username</a></li> 
-=======
->>>>>>> 57875ed33f05b8630ec91b13ad9e988a0d306560
-                <li class="nav-btn"><a class="logout-btn" href="resources/sign-out.php" >Log Out</a></li>
+              <li class="nav-btn"><a class="navbar-username">username</a></li>
+              <li class="nav-btn">
+                <a class="logout-btn" href="resources/sign-out.php">Log Out</a>
+              </li>
               <?php
             }else{
                 ?>
-                <li class="nav-btn" onclick="test('signin')">
+              <li class="nav-btn" onclick="test('signin')">
                 <a id="signin-btn">Sign In</a>
               </li>
               <li class="nav-btn" onclick="test('signup')">
                 <a id="signup-btn">Sign Up</a>
-              </li><?php
+              </li>
+              <?php
             }
             ?>
             </ul>
           </nav>
+          <div class="error-container">
+            <p>twój stary 123</p>
+          </div>
           <div class="title">
-            <a
-              href="/"
-              style="text-decoration: none; color: rgb(33, 33, 33);"
+            <a href="/" style="text-decoration: none; color: rgb(33, 33, 33);"
               ><h1>CSS Tutorials</h1></a
             >
           </div>
