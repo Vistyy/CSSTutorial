@@ -7,10 +7,8 @@ $hash = hash_pass($pass, $data["salt"]);
 if ($hash == $data["passhash"]){
     session_start();
     $_SESSION['username'] = $username;
-    header('Location:../index.php');
-    
 }
-
+header('Location:../index.php');
 
 function hash_pass($password, $salt){
     $hash = crypt($password,$salt);

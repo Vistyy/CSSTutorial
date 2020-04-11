@@ -3,15 +3,15 @@
 $username=$_POST["username"];
 $pass = $_POST["pass"];
 $pass2 = $_POST["pass2"];
-echo ("$username, $pass, $pass2 <br>");
 
 if($pass != $pass2){
-    header ('Location:../index.html');
+    header ('Location:../index.php');
 };
 
 $salt = gen_salt(15);
 $hash = gen_hash($salt,$pass);
 upload_to_db($hash, $salt,$username);
+ header ('Location:../index.php');
 
 
 function gen_salt($n){
