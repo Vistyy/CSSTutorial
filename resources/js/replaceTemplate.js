@@ -10,8 +10,8 @@ window.onload = () => {
   const tutorialArray = [
     Object.keys({ templateAnimations })[0],
     Object.keys({ templateFlexbox })[0],
-    Object.keys({ templateMediaQueries })[0],
-    Object.keys({ templateTextEffects })[0],
+    Object.keys({ templateMediaqueries })[0],
+    Object.keys({ templateTexteffects })[0],
   ];
   let tutorial = getTutorial();
   if (tutorial) tutorial = tutorial.charAt(0).toUpperCase() + tutorial.slice(1);
@@ -241,7 +241,7 @@ color:aquamarine;
         </div>
         `;
 
-const templateMediaQueries = `
+const templateMediaqueries = `
 <h2> CSS Media Queries</h2>
 <h3>Definition</h3>
 <p> The @media rule, introduced in CSS2, made it possible to define different style rules for different media types. <br>
@@ -266,7 +266,7 @@ Instead of looking for a type of device, they look at the capability of the devi
 </div>
 `;
 
-const templateTextEffects = `
+const templateTexteffects = `
 <h2>CSS Text Effects</h2>
 <h3>Definition</h3>
 <p>Text effects provides many options of styling the text and also an automated tools

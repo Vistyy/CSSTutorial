@@ -180,6 +180,7 @@ header {
 }
 .completion-container:hover input ~ .checkmark {
   background-color: #ccc;
+  -webkit-transition: background-color 0.1s;
   transition: background-color 0.1s;
 }
 
@@ -209,7 +210,6 @@ header {
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  -ms-transform: translate(-50%, -50%) rotate(45deg);
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
@@ -788,6 +788,26 @@ header {
   text-transform: capitalize;
 }
 
+#signinform input::-webkit-input-placeholder,
+#signupform input::-webkit-input-placeholder {
+  text-transform: capitalize;
+}
+
+#signinform input::-moz-placeholder,
+#signupform input::-moz-placeholder {
+  text-transform: capitalize;
+}
+
+#signinform input:-ms-input-placeholder,
+#signupform input:-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
+#signinform input::-ms-input-placeholder,
+#signupform input::-ms-input-placeholder {
+  text-transform: capitalize;
+}
+
 #signinform input::placeholder,
 #signupform input::placeholder {
   text-transform: capitalize;
@@ -799,6 +819,7 @@ header {
 #signup-username,
 #signup-pass,
 #signup-pass2 {
+  width: 260px;
   margin-bottom: 15px;
   padding-left: 9px;
   padding-top: 9px;
