@@ -3,9 +3,14 @@
 $username=$_POST["username"];
 $pass = $_POST["pass"];
 $data = get_data($username);
+echo $username;
+echo $pass;
 $hash = hash_pass($pass, $data["salt"]);
 if ($hash == $data["passhash"]){
-    echo "reee";
+    session_start();
+    $_SESSION['username'] = $username;
+    header('Location:../index.php');
+    
 }
 
 
@@ -31,6 +36,7 @@ function get_data($user){
         while($row = $result->fetch_assoc()) {
             $data=array("username"=>$row["username"],"salt"=> $row["salt"],"passhash"=> $row["passhash"]);
         }
+        return $data;
     }
-    return $data;
+    
 }

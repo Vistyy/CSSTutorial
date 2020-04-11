@@ -25,7 +25,17 @@
         <header>
           <nav class="clearfix">
             <ul class="main-nav" id="main-nav">
-              <li class="nav-btn" onclick="test('signin')">
+            <!--  -->
+            <?php
+            session_start();
+            if(isset($_SESSION['username'])){
+                echo $_SESSION['username'];
+                ?>
+                <li ><a class="logout-btn" href="resources/sign-out.php" >Log Out</a></li>
+              <?php
+            }else{
+                ?>
+                <li class="nav-btn" onclick="test('signin')">
                 <a id="signin-btn">Sign In</a>
               </li>
               <li class="nav-btn" onclick="test('signup')">
@@ -34,7 +44,11 @@
               <li class="hidden">
                 <a class="navbar-username hidden">username</a>
               </li>
-              <li class="hidden"><a class="logout-btn hidden">Log Out</a></li>
+              <?php
+            }
+            ?>
+
+              <!--  -->
             </ul>
           </nav>
           <div class="title">
