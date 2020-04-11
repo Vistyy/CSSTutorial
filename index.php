@@ -55,7 +55,7 @@
           </nav>
           <div class="title">
             <a
-              href="index.html"
+              href="/"
               style="text-decoration: none; color: rgb(33, 33, 33);"
               ><h1>CSS Tutorials</h1></a
             >
