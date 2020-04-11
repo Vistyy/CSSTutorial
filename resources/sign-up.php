@@ -31,11 +31,11 @@ function gen_hash($salt, $password){
 }
 
 function upload_to_db($hash,$salt, $user){
-    $servername = "localhost";
+    $servername = "172.17.0.3";
     $username = "root";
-    $password = "";
+    $password = "dupa12";
 
-    $conn = new mysqli($servername, $username, $password, "css");
+    $conn = new mysqli($servername, $username, $password, "csstutorial");
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
