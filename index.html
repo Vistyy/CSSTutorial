@@ -2,14 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="height=device-height, 
-                      width=device-width, initial-scale=1.0, 
-                      minimum-scale=1.0, maximum-scale=1.0, 
-                      user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/queries.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="resources/js/windows.js"></script>
+    <script src="resources/js/slideshow.js"></script>
+    <script src="resources/js/replaceTemplate.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap"
       rel="stylesheet"
@@ -21,54 +23,112 @@
     <div class="main-container" id="main-container" onclick="outsidePopUp()">
       <div class="content-wrap">
         <header>
-          <nav>
-            <div class="clearfix">
-              <ul class="main-nav" id="main-nav">
-                <li onclick="test('signin')"><a id="signin-btn">Sign In</a></li>
-                <li onclick="test('signup')"><a id="signup-btn">Sign Up</a></li>
-              </ul>
-            </div>
+          <nav class="clearfix">
+            <ul class="main-nav" id="main-nav">
+              <li class="nav-btn" onclick="test('signin')">
+                <a id="signin-btn">Sign In</a>
+              </li>
+              <li class="nav-btn" onclick="test('signup')">
+                <a id="signup-btn">Sign Up</a>
+              </li>
+              <li class="hidden">
+                <a class="navbar-username hidden">username</a>
+              </li>
+              <li class="hidden"><a class="logout-btn hidden">Log Out</a></li>
+            </ul>
           </nav>
           <div class="title">
-            <h1>CSS Tutorials</h1>
+            <a
+              href="/index.html"
+              style="text-decoration: none; color: rgb(33, 33, 33);"
+              ><h1>CSS Tutorials</h1></a
+            >
           </div>
         </header>
         <div class="tutorial-list-box" id="tutorial-list-box">
           <h2>Tutorial List</h2>
           <ul class="tutorial-list clearfix" id="tutorial-list">
             <li class="list-animations">
-              <figure class="box-animations" onclick="tutorialPopUp('Animations', 3);showSlides()">
+              <figure
+                class="box-animations"
+                onclick="tutorialPopUp('Animations', 3);showSlides()"
+              >
                 <a>
                   <h3>Animations</h3>
                 </a>
               </figure>
-              <a class="external" href="?tutorial=animations" target="_blank"><i class="fa fa-external-link"></i></a>
+              <label class="completion-container">
+                <input type="checkbox" name="completion" id="completion" />
+                <span class="checkmark"></span>
+              </label>
+              <a
+                class="external"
+                href="./resources/html/template.html?tutorial=animations"
+                ><i class="fa fa-external-link"></i
+              ></a>
             </li>
             <li class="list-flexbox">
-              <figure class="box-flexbox" onclick="tutorialPopUp('Flexbox', 3);showSlides()">
+              <figure
+                class="box-flexbox"
+                onclick="tutorialPopUp('Flexbox', 3);showSlides()"
+              >
                 <a>
                   <h3 id="normal-flex-title">Flexbox</h3>
-                  <h3 id="flex-title"><p>F</p><p>lex</p><p>box</p></h3>
+                  <div id="flex-title">
+                    <div><h3>F</h3></div>
+                    <div><h3>lex</h3></div>
+                    <div><h3>box</h3></div>
+                  </div>
                 </a>
               </figure>
-              <a class="external" href="#flexbox" target="_blank"><i class="fa fa-external-link"></i></a>
+              <label class="completion-container">
+                <input type="checkbox" name="completion" id="completion" />
+                <span class="checkmark"></span>
+              </label>
+              <a
+                class="external"
+                href="./resources/html/template.html?tutorial=flexbox"
+                ><i class="fa fa-external-link"></i
+              ></a>
             </li>
             <li class="list-media">
-              <figure class="box-media-queries" onclick="tutorialPopUp('MediaQueries', 2);showSlides()">
+              <figure
+                class="box-media-queries"
+                onclick="tutorialPopUp('MediaQueries', 2);showSlides()"
+              >
                 <a>
                   <div class="moving-block"></div>
                   <h3>Media Queries</h3>
                 </a>
               </figure>
-              <a class="external" href="#mediaqueries" target="_blank"><i class="fa fa-external-link"></i></a>
+              <label class="completion-container">
+                <input type="checkbox" name="completion" id="completion" />
+                <span class="checkmark"></span>
+              </label>
+              <a
+                class="external"
+                href="./resources/html/template.html?tutorial=mediaqueries"
+                ><i class="fa fa-external-link"></i
+              ></a>
             </li>
             <li class="list-text">
-              <figure class="box-text-effects" onclick="tutorialPopUp('TextEffects', 5);showSlides()">
+              <figure
+                class="box-text-effects"
+                onclick="tutorialPopUp('TextEffects', 5);showSlides()"
+              >
                 <a>
                   <h3>Text Effects</h3>
                 </a>
               </figure>
-              <a class="external" href="#texteffects" target="_blank"><i class="fa fa-external-link"></i></a>
+              <label class="completion-container">
+                <input type="checkbox" name="completion" id="completion" />
+                <span class="checkmark"></span>
+              </label>
+              <a
+                class="external"
+                href="./resources/html/template.html?tutorial=texteffects"
+                ><i class="fa fa-external-link"></i
+              ></a>
             </li>
           </ul>
         </div>
@@ -77,53 +137,90 @@
     </div>
     <div class="collapsed slideshow-container" id="slideshow-container">
       <div class="slideshow-window" id="slideshow-window"></div>
-<a class="prev fa fa-angle-left" onclick="plusSlides(-1)"></a>
-<a class="next fa fa-angle-right" onclick="plusSlides(1)"></a>
-<div class="dot-container" id="dot-container"></div>
-<i class="fa fa-times" onclick="tutorialPopUp()" id="close-btn"></i>
-</div>
+      <a class="prev fa fa-angle-left" onclick="plusSlides(-1)"></a>
+      <a class="next fa fa-angle-right" onclick="plusSlides(1)"></a>
+      <div class="dot-container" id="dot-container"></div>
+      <i class="fa fa-times" onclick="tutorialPopUp()"></i>
+    </div>
     <div class="signincollapsed" id="signin-window">
-      <i class="fa fa-times" onclick="test('signin')" id="close-btn"></i>
+      <i class="fa fa-times" onclick="test('signin')"></i>
       <h3>sign in</h3>
-      <form action="resources/sign-in.php" method="post" id="signinform" class="clearfix">
+      <form
+        action="resources/sign-in.php"
+        method="post"
+        id="signinform"
+        class="clearfix"
+      >
         <div>
           <i class="fa fa-user" aria-hidden="true"></i>
-        <input type="text" name="username" id="signin-username" placeholder="Username">
-      </div>
+          <input
+            type="text"
+            name="username"
+            id="signin-username"
+            placeholder="Username"
+          />
+        </div>
         <div>
           <i class="fa fa-lock" aria-hidden="true"></i>
-        <input type="password" name="pass" id="signin-pass" placeholder="Password">
-      </div>
-      <div>
-        <!-- <i class="fa fa-arrow-right" aria-hidden="true" onclick="submit()" > </i> -->
-        <input type="submit" value="sign in" id="signin-submit">
-        </button>
-      </div>
+          <input
+            type="password"
+            name="pass"
+            id="signin-pass"
+            placeholder="Password"
+          />
+        </div>
+        <div>
+          <!-- <i class="fa fa-arrow-right" aria-hidden="true" onclick="submit()" > </i> -->
+          <input type="submit" value="sign in" id="signin-submit" />
+        </div>
       </form>
     </div>
     <div class="signupcollapsed" id="signup-window">
-      <i class="fa fa-times" onclick="test('signup')" id="close-btn"></i>
+      <i class="fa fa-times" onclick="test('signup')"></i>
       <h3>sign up</h3>
-      <form action="resources/sign-up.php" method="post" id="signupform" class="clearfix">
+      <form
+        action="resources/sign-up.php"
+        method="post"
+        id="signupform"
+        class="clearfix"
+      >
         <div>
           <i class="fa fa-user" aria-hidden="true"></i>
-        <input type="text" name="username" id="signup-username" placeholder="Username">
-      </div>
+          <input
+            type="text"
+            name="username"
+            id="signup-username"
+            placeholder="Username"
+          />
+        </div>
         <div>
           <i class="fa fa-lock first-lock" aria-hidden="true"></i>
-        <input type="password" name="pass" id="signup-pass" placeholder="Password">
-      </div>
+          <input
+            type="password"
+            name="pass"
+            id="signup-pass"
+            placeholder="Password"
+          />
+        </div>
         <div>
           <i class="fa fa-lock second-lock" aria-hidden="true"></i>
-          <input type="password" name="pass2" id="signup-pass2" placeholder="Confirm Password">
-      </div>
-      <div>
-        <!-- <i class="fa fa-arrow-right" aria-hidden="true" onclick="submit()" > </i> -->
-        <input type="submit" value="sign up" id="signup-submit" onclick="submit()">
-        </button>
-      </div>
+          <input
+            type="password"
+            name="pass2"
+            id="signup-pass2"
+            placeholder="Confirm Password"
+          />
+        </div>
+        <div>
+          <!-- <i class="fa fa-arrow-right" aria-hidden="true" onclick="submit()" > </i> -->
+          <input
+            type="submit"
+            value="sign up"
+            id="signup-submit"
+            onclick="submit()"
+          />
+        </div>
       </form>
     </div>
-    
   </body>
 </html>
