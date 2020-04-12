@@ -47,6 +47,25 @@
             >
           </div>
         </header>
+        <div class="profile-container clearfix">
+          <div class="profile">
+            <div>
+              <img src="./../img/placeholder.png" alt="Profile Image" />
+              <h3>username</h3>
+            </div>
+            <div class="comment-block">
+              <textarea
+                name="comment"
+                id="comment"
+                cols="60"
+                rows="10"
+                draggable="false"
+              ></textarea>
+              <input type="submit" class="submit" />
+            </div>
+          </div>
+          <div class="notes"></div>
+        </div>
       </div>
       <footer>stuff to type in here, copyrightedtm</footer>
     </div>
@@ -88,7 +107,7 @@
         </div>
       </form>
     </div>
-    <div class="signupcollapsed" class="submit" id="signup-window">
+    <div class="signupcollapsed" id="signup-window">
       <i class="fa fa-times" onclick="test('signup')"></i>
       <h3>sign up</h3>
       <form
@@ -129,6 +148,7 @@
           <input
             type="submit"
             value="sign up"
+            class="submit"
             id="signup-submit"
             onclick="submit()"
           />

@@ -1,3 +1,4 @@
+tutorialContainer = document.getElementById("tutorial-list-box");
 function test(arg) {
   el = document.getElementById(`${arg}-window`);
   mainContainer = document.getElementById("main-container");
@@ -10,13 +11,14 @@ function test(arg) {
     el.classList.toggle(`${arg}collapsed`);
     document.getElementById(`${arg}form`).reset();
     mainContainer.style.opacity = "0.7";
-    document.getElementById("tutorial-list-box").style = "pointer-events: none";
+    if (tutorialContainer) tutorialContainer.style = "pointer-events: none";
   } else {
     el.classList.toggle(`${arg}window`);
     el.classList.toggle(`${arg}collapsed`);
     mainContainer.removeAttribute("style");
     document.getElementById(`${arg}form`).reset();
-    document.getElementById("tutorial-list-box").removeAttribute("style");
+    if (tutorialContainer)
+      document.getElementById("tutorial-list-box").removeAttribute("style");
   }
 }
 
@@ -40,7 +42,7 @@ function outsidePopUp() {
     mainContainer.removeAttribute("style");
     document.getElementById(`signinform`).reset();
     document.getElementById(`signupform`).reset();
-    document.getElementById("tutorial-list-box").removeAttribute("style");
+    if (tutorialContainer) tutorialContainer.removeAttribute("style");
   }
 }
 
