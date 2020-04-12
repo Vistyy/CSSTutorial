@@ -84,9 +84,9 @@
                 cols="60"
                 rows="10"
                 draggable="false"
-                form = 'noteform'
+                form="noteform"
               ></textarea>
-              <input type="submit" class="submit"  value="Add note" form='noteform'>
+              <input type="submit" class="submit"  value="Add note" form="noteform">
             </div>
           </div>
           <div class="notes"></div>
