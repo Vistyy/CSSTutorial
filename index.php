@@ -54,9 +54,19 @@
             ?>
             </ul>
           </nav>
-          <div class="error-container">
-            <p>twój stary 123</p>
-          </div>
+          <?php
+            if(isset($_SESSION['error'])){
+              ?>
+              <div class="error-container">
+              <p><?php echo $_SESSION['error'] ;
+                  unset($_SESSION['error']);
+              ?></p>
+            </div>
+            <?php
+            }
+
+
+          ?>
           <div class="title">
             <a href="/" style="text-decoration: none; color: rgb(33, 33, 33);"
               ><h1>CSS Tutorials</h1></a
