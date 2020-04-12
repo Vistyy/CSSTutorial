@@ -10,22 +10,22 @@ $conn = new mysqli($servername, $usernamedb, $passworddb, "csstutorial");
 
 
 if(isset($_POST['completion-flexbox'])){
-   $query = "UPDATE progress flexbox=true WHERE username='$username'";
+   $query = "UPDATE set progress flexbox=true WHERE username='$username'";
    mysqli_query($conn, $query);
 
 }
 if(isset($_POST['completion-effects'])){
-    $query = "UPDATE progress text=true WHERE username='$username'";
+    $query = "UPDATE set progress text=true WHERE username='$username'";
     mysqli_query($conn, $query);
 }
 
 if(isset($_POST['completion-anim'])){
-    $query = "UPDATE progress animations=true WHERE username='$username'";
+    $query = "UPDATE set progress animations=true WHERE username='$username'";
     mysqli_query($conn, $query);
 }
 
 if(isset($_POST['completion-media'])){
-    $query = "UPDATE progress media=true WHERE username='$username'";
+    $query = "UPDATE progress set media=true WHERE username='$username'";
     mysqli_query($conn, $query);
 }
 header('Location:../index.php');
