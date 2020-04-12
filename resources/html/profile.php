@@ -39,13 +39,13 @@
             <?php
             if(isset($_SESSION['username'])){
                 ?>
-              <li class="nav-btn"><a class="navbar-username"  href="./resources/html/profile.html"> 
+              <li class="nav-btn"><a class="navbar-username"  href="../html/profile.html"> 
                 <?php 
                 echo $_SESSION['username']
                 ?>
                 </a></li>
               <li class="nav-btn">
-                <a class="logout-btn" href="resources/sign-out.php">Log Out</a>
+                <a class="logout-btn" href="../sign-out.php">Log Out</a>
               </li>
               <?php
             }else{
@@ -93,7 +93,7 @@
       <i class="fa fa-times" onclick="test('signin')"></i>
       <h3>sign in</h3>
       <form
-        action="resources/sign-in.php"
+        action="../sign-in.php"
         method="post"
         id="signinform"
         class="clearfix"
@@ -131,7 +131,7 @@
       <i class="fa fa-times" onclick="test('signup')"></i>
       <h3>sign up</h3>
       <form
-        action="resources/sign-up.php"
+        action="../sign-up.php"
         method="post"
         id="signupform"
         class="clearfix"
