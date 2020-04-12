@@ -82,7 +82,7 @@
                 </a>
               </figure>
               <label class="completion-container">
-                <input type="checkbox" name="completion" id="completion" />
+                <input type="checkbox" name="completion"/>
                 <span class="checkmark"></span>
               </label>
               <a
@@ -106,7 +106,7 @@
                 </a>
               </figure>
               <label class="completion-container">
-                <input type="checkbox" name="completion" id="completion" />
+                <input type="checkbox" name="completion"/>
                 <span class="checkmark"></span>
               </label>
               <a
@@ -126,7 +126,7 @@
                 </a>
               </figure>
               <label class="completion-container">
-                <input type="checkbox" name="completion" id="completion" />
+                <input type="checkbox" name="completion"/>
                 <span class="checkmark"></span>
               </label>
               <a
@@ -145,7 +145,7 @@
                 </a>
               </figure>
               <label class="completion-container">
-                <input type="checkbox" name="completion" id="completion" />
+                <input type="checkbox" name="completion"/>
                 <span class="checkmark"></span>
               </label>
               <a
