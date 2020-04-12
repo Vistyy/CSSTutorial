@@ -89,7 +89,18 @@
               <input type="submit" class="submit"  value="Add note" form="noteform">
             </div>
           </div>
-          <div class="notes"></div>
+          <div class="notes">
+              <?php
+              $username=$_SESSION['username'];
+              $text = $_POST['comment'];
+              $servername = "172.17.0.3";
+              $usernamedb = "root";
+              $passworddb = "dupa12";
+              $conn = new mysqli($servername, $usernamedb, $passworddb, "csstutorial");
+              $query = "SELECT * FROM notes WHERE username=$username"
+
+              ?>
+          </div>
         </div>
       </div>
       <footer>stuff to type in here, copyrightedtm</footer>

@@ -21,13 +21,13 @@ else{
 }
 $completion = get_completion($conn, $username);
 if ($completion['flexbox']==1){
-    $_SESSION['completion-anim'] = 1;
+    $_SESSION['completion-flexbox'] = 1;
 }
 if ($completion['media']==1){
     $_SESSION['completion-media'] = 1;
 }
 if ($completion['animations']==1){
-    $_SESSION['completion-flexbox'] = 1;
+    $_SESSION['completion-anim'] = 1;
 }
 if ($completion['text']==1){
     $_SESSION['completion-effects'] = 1;
