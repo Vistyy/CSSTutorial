@@ -6,7 +6,12 @@ $data = get_data($username);
 $hash = hash_pass($pass, $data["salt"]);
 if ($hash == $data["passhash"]){
     session_start();
+    session_unset();
     $_SESSION['username'] = $username;
+}
+else{
+    session_start();
+    $_SESSION['error']="Wrong username/password";
 }
 header('Location:../index.php');
 
