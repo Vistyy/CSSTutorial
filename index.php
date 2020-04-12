@@ -115,7 +115,7 @@
                <!--  -->
                <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" name="completion-flexbox" />
+                <input type="checkbox" onclick="this.form.submit()" name="completion-flexbox" />
                 <span class="checkmark"></span>
               </label>
               </form>
@@ -139,7 +139,7 @@
               <!--  -->
               <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" name="completion-media"  />
+                <input type="checkbox" onclick="this.form.submit()" name="completion-media"  />
                 <span class="checkmark"></span>
               </label>
               </form>
@@ -162,7 +162,7 @@
                <!--  -->
                <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" name="completion-effects"  />
+                <input type="checkbox" onclick="this.form.submit()" name="completion-effects"  />
                 <span class="checkmark"></span>
               </label>
               </form>
