@@ -8,7 +8,7 @@ $passworddb = "dupa12";
 $conn = new mysqli($servername, $usernamedb, $passworddb, "csstutorial");
 
 
-$query = "INSERT INTO notes ('username', 'text') VALUES ('$username', '$text')";
+$query = "INSERT INTO notes (username, text) VALUES ('$username', '$text')";
 mysqli_query($conn, $query);
 
-header ('Location:../index.php');
+header ('Location:../resources/html/profile.php');
