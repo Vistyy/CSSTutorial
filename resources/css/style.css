@@ -1312,6 +1312,7 @@ footer {
   width: 140px;
   border: 1px solid #000000;
   word-break: break-all;
+  margin-bottom: 30px;
 }
 .wordwrapping1 {
   width: 11em;
@@ -1321,6 +1322,7 @@ footer {
   width: 11em;
   border: 1px solid #000000;
   word-wrap: break-word;
+  margin-bottom: 30px;
 }
 .writingmode1 {
   -webkit-writing-mode: horizontal-tb;
