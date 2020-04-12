@@ -31,7 +31,7 @@
               <?php
             if(isset($_SESSION['username'])){
                 ?>
-              <li class="nav-btn"><a class="navbar-username">
+              <li class="nav-btn"><a class="navbar-username"  href="./resources/html/profile.html"> 
                 <?php 
                 echo $_SESSION['username']
                 ?>
@@ -89,7 +89,7 @@
               <label class="completion-container">
                 <input type="checkbox" onclick="this.form.submit()" name="completion-anim" />
                 <span class="checkmark"></span>
-              </label>
+              </label>r
               </form>
               <!--  -->
               <a
