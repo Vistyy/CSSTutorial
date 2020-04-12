@@ -10,5 +10,5 @@ $conn = new mysqli($servername, $usernamedb, $passworddb, "csstutorial");
 
 
 $query = "INSERT INTO notes (username, text) VALUES ('$username', '$text')";
-mysql_query($conn, $query);
+mysqli_query($conn, $query);
 
