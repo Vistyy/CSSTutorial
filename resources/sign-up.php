@@ -3,6 +3,10 @@
 $username=$_POST["username"];
 $pass = $_POST["pass"];
 $pass2 = $_POST["pass2"];
+$servername = "172.17.0.3";
+$usernamedb = "root";
+$passworddb = "dupa12";
+$conn = new mysqli($servername, $usernamedb, $passworddb, "csstutorial");
 
 if($pass != $pass2){
     session_start();
@@ -14,8 +18,8 @@ if($pass != $pass2){
 
 $salt = gen_salt(15);
 $hash = gen_hash($salt,$pass);
-check_if_exists($username);
-upload_to_db($hash, $salt,$username);
+check_if_exists($username, $conn);
+upload_to_db($hash, $salt,$username, $conn);
  header ('Location:../index.php');
 
 
@@ -35,12 +39,7 @@ function gen_hash($salt, $password){
     return $hash;
 }
 
-function check_if_exists($user){
-    $servername = "172.17.0.3";
-    $username = "root";
-    $password = "dupa12";
-
-    $conn = new mysqli($servername, $username, $password, "csstutorial");
+function check_if_exists($user,$conn){
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -57,12 +56,8 @@ function check_if_exists($user){
 
 
 
-function upload_to_db($hash,$salt, $user){
-    $servername = "172.17.0.3";
-    $username = "root";
-    $password = "dupa12";
-
-    $conn = new mysqli($servername, $username, $password, "csstutorial");
+function upload_to_db($hash,$salt, $user, $conn){
+    
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);

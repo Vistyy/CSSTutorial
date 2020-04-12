@@ -2,7 +2,11 @@
 
 $username=$_POST["username"];
 $pass = $_POST["pass"];
-$data = get_data($username);
+$servername = "172.17.0.3";
+$usernamedb = "root";
+$passworddb = "dupa12";
+$conn = new mysqli($servername, $usernamedb, $passworddb, "csstutorial");
+$data = get_data($username, $conn);
 $hash = hash_pass($pass, $data["salt"]);
 if ($hash == $data["passhash"]){
     session_start();
@@ -21,12 +25,8 @@ function hash_pass($password, $salt){
 }
 
 
-function get_data($user){
-    $servername = "172.17.0.3";
-    $username = "root";
-    $password = "dupa12";
-
-    $conn = new mysqli($servername, $username, $password, "csstutorial");
+function get_data($user, $conn){
+    
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
