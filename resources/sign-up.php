@@ -46,7 +46,7 @@ function check_if_exists($user){
     if ($result->num_rows > 0) {
             session_start();
             session_unset();
-            $_SESSION['error']="This username is already used";
+            $_SESSION['error']="This username is already in use";
             header('Location:../index.php');
     }
 }
