@@ -30,7 +30,6 @@
             <ul class="main-nav" id="main-nav">
               <?php
             if(isset($_SESSION['username'])){
-                echo $_SESSION['username'];
                 ?>
               <li class="nav-btn"><a class="navbar-username">
                 <?php 
@@ -54,9 +53,19 @@
             ?>
             </ul>
           </nav>
-          <div class="error-container">
-            <p>twój stary 123</p>
-          </div>
+          <?php
+            if(isset($_SESSION['error'])){
+              ?>
+              <div class="error-container">
+              <p><?php echo $_SESSION['error'] ;
+                  unset($_SESSION['error']);
+              ?></p>
+            </div>
+            <?php
+            }
+
+
+          ?>
           <div class="title">
             <a href="/" style="text-decoration: none; color: rgb(33, 33, 33);"
               ><h1>CSS Tutorials</h1></a
@@ -75,25 +84,14 @@
                   <h3>Animations</h3>
                 </a>
               </figure>
-<<<<<<< HEAD
-              <!--  -->
-              <?php
-                if(isset($_SESSION['username'])){ ?>
-                <form action="resources/completion.php" method="post">
-                  <label class="completion-container">
-                    <input type="checkbox" onchange="this.form.submit()" name="completion-animations"/>
-                    <span class="checkmark"></span>
-                  </label>
-                  </form>
-                <?php }
-              ?>
-              <!--  -->
-=======
+               <!--  -->
+               <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" name="completion" id="completion" />
+                <input type="checkbox" onclick="this.form.submit()" name="completion-anim" />
                 <span class="checkmark"></span>
               </label>
->>>>>>> 976195019ef662a665c73d41da55d3fe628fbc06
+              </form>
+              <!--  -->
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=animations"
@@ -114,25 +112,14 @@
                   </div>
                 </a>
               </figure>
-<<<<<<< HEAD
-              <!--  -->
-              <?php
-                if(isset($_SESSION['username'])){ ?>
-                <form action="resources/completion.php" method="post">
-                  <label class="completion-container">
-                    <input type="checkbox" onchange="this.form.submit()" name="completion-flexbox"/>
-                    <span class="checkmark"></span>
-                  </label>
-                  </form>
-                <?php }
-              ?>
-              <!--  -->
-=======
+               <!--  -->
+               <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" name="completion" id="completion" />
+                <input type="checkbox" onclick="this.form.submit()"  name="completion-flexbox" />
                 <span class="checkmark"></span>
               </label>
->>>>>>> 976195019ef662a665c73d41da55d3fe628fbc06
+              </form>
+              <!--  -->
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=flexbox"
@@ -149,25 +136,14 @@
                   <h3>Media Queries</h3>
                 </a>
               </figure>
-<<<<<<< HEAD
               <!--  -->
-              <?php
-                if(isset($_SESSION['username'])){ ?>
-                <form action="resources/completion.php" method="post">
-                  <label class="completion-container">
-                    <input type="checkbox" onchange="this.form.submit()" name="completion-media"/>
-                    <span class="checkmark"></span>
-                  </label>
-                  </form>
-                <?php }
-              ?>
-              <!--  -->
-=======
+              <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" name="completion" id="completion" />
+                <input type="checkbox" onclick="this.form.submit()" name="completion-media"  />
                 <span class="checkmark"></span>
               </label>
->>>>>>> 976195019ef662a665c73d41da55d3fe628fbc06
+              </form>
+              <!--  -->
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=mediaqueries"
@@ -183,25 +159,14 @@
                   <h3>Text Effects</h3>
                 </a>
               </figure>
-<<<<<<< HEAD
-              <!--  -->
-              <?php
-                if(isset($_SESSION['username'])){ ?>
-                <form action="resources/completion.php" method="post">
-                  <label class="completion-container">
-                    <input type="checkbox" onchange="this.form.submit()" name="completion-text"/>
-                    <span class="checkmark"></span>
-                  </label>
-                  </form>
-                <?php }
-              ?>
-              <!--  -->
-=======
+               <!--  -->
+               <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" name="completion" id="completion" />
+                <input type="checkbox" onclick="this.form.submit()" name="completion-effects"  />
                 <span class="checkmark"></span>
               </label>
->>>>>>> 976195019ef662a665c73d41da55d3fe628fbc06
+              </form>
+              <!--  -->
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=texteffects"

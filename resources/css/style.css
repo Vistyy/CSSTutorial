@@ -844,9 +844,7 @@ header {
   border-radius: 0.3rem;
   font-size: 90%;
 }
-.submit::placeholder,
-#signinform input,
-#signupform input {
+.submit::placeholder {
   text-transform: capitalize;
 }
 

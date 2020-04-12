@@ -63,7 +63,11 @@ function upload_to_db($hash,$salt, $user, $conn){
         die("Connection failed: " . $conn->connect_error);
     }
     $query = "INSERT INTO users (username,salt, passhash) VALUES ('$user', '$salt', '$hash')";
+
     mysqli_query($conn, $query);
+    $query = "INSERT INTO progress (username) VALUES ('$user')";
+    mysqli_query($conn, $query);
+
 }
 
 
