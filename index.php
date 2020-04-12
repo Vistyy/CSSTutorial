@@ -115,7 +115,7 @@
                <!--  -->
                <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" onclick="this.form.submit()" name="completion-flexbox" />
+                <input type="checkbox" onclick="this.form.submit()"  name="completion-flexbox" />
                 <span class="checkmark"></span>
               </label>
               </form>
