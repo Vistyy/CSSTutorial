@@ -139,7 +139,7 @@
               <!--  -->
               <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" onclick="this.form.submit()" name="completion-media" <?php if(isset($_SESSION['completion-media"'])) echo "checked"; ?> />
+                <input type="checkbox" onclick="this.form.submit()" name="completion-media" <?php if(isset($_SESSION['completion-media"'])) echo "checked"; ?> checked/>
                 <span class="checkmark"></span>
               </label>
               </form>
