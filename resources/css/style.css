@@ -1265,8 +1265,8 @@ footer {
   height: 100%;
   display: -webkit-inline-box;
   display: inline-flex;
-  padding-right: 80px;
-  padding-bottom: 50px;
+  margin-right: 80px;
+  margin-bottom: 50px;
 }
 .middle img {
   margin-top: 20px;
