@@ -31,7 +31,7 @@
               <?php
             if(isset($_SESSION['username'])){
                 ?>
-              <li class="nav-btn"><a class="navbar-username">
+              <li class="nav-btn"><a class="navbar-username" href="./resources/html/profile.html">
                 <?php 
                 echo $_SESSION['username']
                 ?>
