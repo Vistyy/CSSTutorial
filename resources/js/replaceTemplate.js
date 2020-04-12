@@ -162,7 +162,7 @@ to justify-content--</i>
     <h3>Example</h3> <br>
         <div style="display:flex"/>
             <div class="example-code"/>
-            <pre><i>--Creating containers and items (HTML)--<i><br><br>
+            <code><i>--Creating containers and items (HTML)--<i><br><br>
 div class="example-container"><br>
 div class="example-flex1">1/div><br>
 div class="example-flex1">2/div><br>
@@ -226,7 +226,7 @@ text-align:center;
 color:aquamarine;
 }
 
-</pre>
+</code>
             </div>
             <div class="example-container">
                 <div class="example-flex1">1
