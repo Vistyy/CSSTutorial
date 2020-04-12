@@ -104,6 +104,7 @@
                     echo $row['date'];
                     echo "<br>";
                     echo $row['text'];
+                    echo "<br>";
                 }
             }
               ?>
