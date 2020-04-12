@@ -54,7 +54,9 @@
             if(isset($_SESSION['error'])){
               ?>
               <div class="error-container">
-              <p><?php echo $_SESSION['error']  ?></p>
+              <p><?php echo $_SESSION['error'] ;
+              session_unset();
+              ?></p>
             </div>
             <?php
             }

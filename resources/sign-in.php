@@ -38,6 +38,11 @@ function get_data($user){
             $data=array("username"=>$row["username"],"salt"=> $row["salt"],"passhash"=> $row["passhash"]);
         }
         return $data;
+    }else{
+        session_start();
+        session_unset();
+        $_SESSION['error']="Wrong username/password";
+        header('Location:../index.php');
     }
     
 }
