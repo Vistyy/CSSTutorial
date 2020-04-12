@@ -5,7 +5,11 @@ $pass = $_POST["pass"];
 $pass2 = $_POST["pass2"];
 
 if($pass != $pass2){
-    header ('Location:../index.php');
+    session_start();
+    session_unset();
+    $_SESSION['error']="The passwords don't match";
+    header('Location:../index.php');
+
 };
 
 $salt = gen_salt(15);

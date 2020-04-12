@@ -55,7 +55,7 @@
               ?>
               <div class="error-container">
               <p><?php echo $_SESSION['error'] ;
-              session_unset();
+                  unset($_SESSION['error']);
               ?></p>
             </div>
             <?php
