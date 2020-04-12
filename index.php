@@ -81,10 +81,18 @@
                   <h3>Animations</h3>
                 </a>
               </figure>
-              <label class="completion-container">
-                <input type="checkbox" name="completion"/>
-                <span class="checkmark"></span>
-              </label>
+              <!--  -->
+              <?php
+                if(isset($_SESSION['username'])){ ?>
+                <form action="resources/completion.php" method="post">
+                  <label class="completion-container">
+                    <input type="checkbox" onchange="this.form.submit()" name="completion-animations"/>
+                    <span class="checkmark"></span>
+                  </label>
+                  </form>
+                <?php }
+              ?>
+              <!--  -->
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=animations"
@@ -105,10 +113,18 @@
                   </div>
                 </a>
               </figure>
-              <label class="completion-container">
-                <input type="checkbox" name="completion"/>
-                <span class="checkmark"></span>
-              </label>
+              <!--  -->
+              <?php
+                if(isset($_SESSION['username'])){ ?>
+                <form action="resources/completion.php" method="post">
+                  <label class="completion-container">
+                    <input type="checkbox" onchange="this.form.submit()" name="completion-flexbox"/>
+                    <span class="checkmark"></span>
+                  </label>
+                  </form>
+                <?php }
+              ?>
+              <!--  -->
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=flexbox"
@@ -125,10 +141,18 @@
                   <h3>Media Queries</h3>
                 </a>
               </figure>
-              <label class="completion-container">
-                <input type="checkbox" name="completion"/>
-                <span class="checkmark"></span>
-              </label>
+              <!--  -->
+              <?php
+                if(isset($_SESSION['username'])){ ?>
+                <form action="resources/completion.php" method="post">
+                  <label class="completion-container">
+                    <input type="checkbox" onchange="this.form.submit()" name="completion-media"/>
+                    <span class="checkmark"></span>
+                  </label>
+                  </form>
+                <?php }
+              ?>
+              <!--  -->
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=mediaqueries"
@@ -144,10 +168,18 @@
                   <h3>Text Effects</h3>
                 </a>
               </figure>
-              <label class="completion-container">
-                <input type="checkbox" name="completion"/>
-                <span class="checkmark"></span>
-              </label>
+              <!--  -->
+              <?php
+                if(isset($_SESSION['username'])){ ?>
+                <form action="resources/completion.php" method="post">
+                  <label class="completion-container">
+                    <input type="checkbox" onchange="this.form.submit()" name="completion-text"/>
+                    <span class="checkmark"></span>
+                  </label>
+                  </form>
+                <?php }
+              ?>
+              <!--  -->
               <a
                 class="external"
                 href="./resources/html/template.html?tutorial=texteffects"
