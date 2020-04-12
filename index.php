@@ -87,7 +87,7 @@
                <!--  -->
                <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" onclick="this.form.submit()" name="completion-anim" />
+                <input type="checkbox" onclick="this.form.submit()" name="completion-anim" <?php if(isset($_SESSION['completion-anim"'])) echo "checked"; ?>   />
                 <span class="checkmark"></span>
               </label>r
               </form>
@@ -115,7 +115,7 @@
                <!--  -->
                <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" onclick="this.form.submit()"  name="completion-flexbox" />
+                <input type="checkbox" onclick="this.form.submit()"  name="completion-flexbox" <?php if(isset($_SESSION['completion-flexbox"'])) echo "checked"; ?>/>
                 <span class="checkmark"></span>
               </label>
               </form>
@@ -139,7 +139,7 @@
               <!--  -->
               <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" onclick="this.form.submit()" name="completion-media"  />
+                <input type="checkbox" onclick="this.form.submit()" name="completion-media" <?php if(isset($_SESSION['completion-media"'])) echo "checked"; ?> />
                 <span class="checkmark"></span>
               </label>
               </form>
@@ -162,7 +162,7 @@
                <!--  -->
                <form action="resources/completion.php" method="post">
               <label class="completion-container">
-                <input type="checkbox" onclick="this.form.submit()" name="completion-effects"  />
+                <input type="checkbox" onclick="this.form.submit()" name="completion-effects" <?php if(isset($_SESSION['completion-effects"'])) echo "checked"; ?> />
                 <span class="checkmark"></span>
               </label>
               </form>

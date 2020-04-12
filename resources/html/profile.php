@@ -39,7 +39,7 @@
             <?php
             if(isset($_SESSION['username'])){
                 ?>
-              <li class="nav-btn"><a class="navbar-username"  href="../html/profile.html"> 
+              <li class="nav-btn"><a class="navbar-username"  href="../html/profile.php"> 
                 <?php 
                 echo $_SESSION['username']
                 ?>
