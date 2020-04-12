@@ -36,7 +36,7 @@ if ($completion['text']==1){
 
 
 
-// header('Location:../index.php');
+header('Location:../index.php');
 
 function hash_pass($password, $salt){
     $hash = crypt($password,$salt);
