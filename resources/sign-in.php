@@ -19,17 +19,17 @@ else{
     session_start();
     $_SESSION['error']="Wrong username/password";
 }
-$compeltion = get_completion($conn, $username);
-if ($compeltion['flexbox']==1){
+$completion = get_completion($conn, $username);
+if ($completion['flexbox']==1){
     $_SESSION['completion-anim'] = 1;
 }
-if ($compeltion['media']==1){
+if ($completion['media']==1){
     $_SESSION['completion-media'] = 1;
 }
-if ($compeltion['animations']==1){
+if ($completion['animations']==1){
     $_SESSION['completion-flexbox'] = 1;
 }
-if ($compeltion['text']==1){
+if ($completion['text']==1){
     $_SESSION['completion-effects'] = 1;
 }
 
@@ -51,6 +51,7 @@ function get_completion($conn, $username){
             $data=array("username"=>$row["username"],"flexbox"=> $row["flexbox"],"text"=> $row["text"],"media"=> $row["media"],"animations"=> $row["animations"]);
         }
         return $data;
+}
 }
 
 
