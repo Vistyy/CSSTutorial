@@ -89,7 +89,7 @@
               <label class="completion-container">
                 <input type="checkbox" onclick="this.form.submit()" name="completion-anim" <?php if(isset($_SESSION['completion-anim'])) echo "checked disabled"; ?>   />
                 <span class="checkmark"></span>
-              </label>r
+              </label>
               </form>
               <!--  -->
               <a

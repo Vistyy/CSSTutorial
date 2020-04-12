@@ -36,7 +36,7 @@ if ($completion['text']==1){
 
 
 
-header('Location:../index.php');
+// header('Location:../index.php');
 
 function hash_pass($password, $salt){
     $hash = crypt($password,$salt);
@@ -45,7 +45,7 @@ function hash_pass($password, $salt){
 
 function get_completion($conn, $username){
     $query = "SELECT * FROM progress where username='$username'";
-    mysqli_query($conn, $query);
+    $result=mysqli_query($conn, $query);
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             $data=array("username"=>$row["username"],"flexbox"=> $row["flexbox"],"text"=> $row["text"],"media"=> $row["media"],"animations"=> $row["animations"]);
