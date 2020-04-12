@@ -1262,8 +1262,8 @@ footer {
 }
 
 .example-code {
-  width: 50%;
-  height: auto;
+  width: 400px;
+  height: 100%;
   display: -webkit-inline-box;
   display: inline-flex;
   padding-right: 30px;
