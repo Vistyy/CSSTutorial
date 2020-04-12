@@ -6,6 +6,8 @@ $servername = "172.17.0.3";
 $usernamedb = "root";
 $passworddb = "dupa12";
 $conn = new mysqli($servername, $usernamedb, $passworddb, "csstutorial");
+
+
 $data = get_data($username, $conn);
 $hash = hash_pass($pass, $data["salt"]);
 if ($hash == $data["passhash"]){
@@ -26,10 +28,10 @@ function hash_pass($password, $salt){
 
 
 function get_data($user, $conn){
-    
 
     if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
+        die("Connection f
+        ailed: " . $conn->connect_error);
     }
     $query = "SELECT * FROM users WHERE username='$user'";
     $result=mysqli_query($conn, $query);

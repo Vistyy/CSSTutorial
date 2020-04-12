@@ -16,9 +16,9 @@ if($pass != $pass2){
 
 };
 
+check_if_exists($username, $conn);
 $salt = gen_salt(15);
 $hash = gen_hash($salt,$pass);
-check_if_exists($username, $conn);
 upload_to_db($hash, $salt,$username, $conn);
  header ('Location:../index.php');
 
