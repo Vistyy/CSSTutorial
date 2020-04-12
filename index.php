@@ -32,6 +32,11 @@
             if(isset($_SESSION['username'])){
                 echo $_SESSION['username'];
                 ?>
+              <li class="nav-btn"><a class="navbar-username">
+                <?php 
+                echo $_SESSION['username']
+                ?>
+                </a></li>
               <li class="nav-btn">
                 <a class="logout-btn" href="resources/sign-out.php">Log Out</a>
               </li>
@@ -49,20 +54,9 @@
             ?>
             </ul>
           </nav>
-          <?php
-            if(isset($_SESSION['error'])){
-              ?>
-              <div class="error-container">
-              <p><?php echo $_SESSION['error'] ;
-                  unset($_SESSION['error']);
-              ?></p>
-            </div>
-            <?php
-            }
-
-
-          ?>
-          
+          <div class="error-container">
+            <p>twój stary 123</p>
+          </div>
           <div class="title">
             <a href="/" style="text-decoration: none; color: rgb(33, 33, 33);"
               ><h1>CSS Tutorials</h1></a
@@ -82,7 +76,7 @@
                 </a>
               </figure>
               <label class="completion-container">
-                <input type="checkbox" name="completion"/>
+                <input type="checkbox" name="completion" id="completion" />
                 <span class="checkmark"></span>
               </label>
               <a
@@ -106,7 +100,7 @@
                 </a>
               </figure>
               <label class="completion-container">
-                <input type="checkbox" name="completion"/>
+                <input type="checkbox" name="completion" id="completion" />
                 <span class="checkmark"></span>
               </label>
               <a
@@ -126,7 +120,7 @@
                 </a>
               </figure>
               <label class="completion-container">
-                <input type="checkbox" name="completion"/>
+                <input type="checkbox" name="completion" id="completion" />
                 <span class="checkmark"></span>
               </label>
               <a
@@ -145,7 +139,7 @@
                 </a>
               </figure>
               <label class="completion-container">
-                <input type="checkbox" name="completion"/>
+                <input type="checkbox" name="completion" id="completion" />
                 <span class="checkmark"></span>
               </label>
               <a
@@ -195,7 +189,7 @@
         </div>
         <div>
           <!-- <i class="fa fa-arrow-right" aria-hidden="true" onclick="submit()" > </i> -->
-          <input type="submit" value="sign in" id="signin-submit" />
+          <input type="submit" value="sign in" id="signin-submit" class="submit"/>
         </div>
       </form>
     </div>
@@ -241,6 +235,7 @@
             type="submit"
             value="sign up"
             id="signup-submit"
+            class="submit"
             onclick="submit()"
           />
         </div>

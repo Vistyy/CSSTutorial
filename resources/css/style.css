@@ -639,6 +639,82 @@ header {
 
 /*---------------------------------------*/
 
+/*profile*/
+
+/*---------------------------------------*/
+
+.profile-container {
+  display: flex;
+  height: 55vh;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.notes {
+  margin-right: 10%;
+  box-shadow: 0 0 2px 0 rgb(8, 100, 153);
+  border: 2px solid rgb(8, 100, 153);
+  border-radius: 5px;
+  float: right;
+}
+
+.profile {
+  margin-left: 10%;
+  margin-right: 5%;
+  float: left;
+}
+
+.profile,
+.notes {
+  height: 100%;
+  width: 40vh;
+}
+
+.profile img {
+  width: 200px;
+  border-radius: 100%;
+  margin-bottom: 30px;
+}
+
+.profile h3 {
+  color: rgb(33, 33, 33);
+  font-weight: 300;
+  text-transform: lowercase;
+  margin-left: 30px;
+}
+
+.profile textarea {
+  border-radius: 5px;
+  padding: 2px;
+  box-shadow: 0 0 2px 0 rgb(8, 100, 153);
+  background-color: rgb(255, 254, 250);
+  resize: none;
+  border: 2px solid rgb(8, 100, 153);
+  align-self: flex-start;
+}
+
+.profile div {
+  width: auto;
+  display: -webkit-box;
+  display: flex;
+  height: auto;
+}
+
+.profile .submit {
+  align-self: flex-end;
+}
+
+.profile .comment-block {
+  flex-direction: column;
+}
+
+.profile textarea,
+.profile .comment-block {
+  width: 100%;
+}
+
+/*---------------------------------------*/
+
 /*logging in*/
 
 /*---------------------------------------*/
@@ -762,54 +838,15 @@ header {
   margin-top: 50px;
 }
 
+.submit,
 #signinform input,
 #signupform input {
   border-radius: 0.3rem;
   font-size: 90%;
 }
-
-#signinform input::-webkit-input-placeholder,
-#signupform input::-webkit-input-placeholder {
-  text-transform: capitalize;
-}
-
-#signinform input::-moz-placeholder,
-#signupform input::-moz-placeholder {
-  text-transform: capitalize;
-}
-
-#signinform input:-ms-input-placeholder,
-#signupform input:-ms-input-placeholder {
-  text-transform: capitalize;
-}
-
-#signinform input::-ms-input-placeholder,
-#signupform input::-ms-input-placeholder {
-  text-transform: capitalize;
-}
-
-#signinform input::-webkit-input-placeholder,
-#signupform input::-webkit-input-placeholder {
-  text-transform: capitalize;
-}
-
-#signinform input::-moz-placeholder,
-#signupform input::-moz-placeholder {
-  text-transform: capitalize;
-}
-
-#signinform input:-ms-input-placeholder,
-#signupform input:-ms-input-placeholder {
-  text-transform: capitalize;
-}
-
-#signinform input::-ms-input-placeholder,
-#signupform input::-ms-input-placeholder {
-  text-transform: capitalize;
-}
-
-#signinform input::placeholder,
-#signupform input::placeholder {
+.submit::placeholder,
+#signinform input,
+#signupform input {
   text-transform: capitalize;
 }
 
@@ -834,8 +871,7 @@ header {
   margin-bottom: 25px;
 }
 
-#signin-submit,
-#signup-submit {
+.submit {
   float: right;
   border: solid 2px rgb(8, 100, 153);
   padding: 5px 10px 5px 10px;
@@ -846,8 +882,7 @@ header {
   text-transform: capitalize;
 }
 
-#signin-submit:hover,
-#signup-submit:hover {
+.submit:hover {
   background-color: rgb(8, 100, 153);
   color: #fff;
   -webkit-transition: 0.2s;
@@ -917,7 +952,9 @@ header {
   border-radius: 4px;
   top: 1%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+  -webkit-animation: bounceInDown 1s;
   animation: bounceInDown 1s;
 }
 
@@ -926,6 +963,7 @@ header {
   text-align: center;
   top: 50%;
   /* left: 1%; */
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
