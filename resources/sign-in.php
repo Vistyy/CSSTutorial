@@ -19,11 +19,38 @@ else{
     session_start();
     $_SESSION['error']="Wrong username/password";
 }
+$compeltion = get_completion($conn, $username);
+if ($compeltion['flexbox']==1){
+    $_SESSION['completion-anim'] = 1;
+}
+if ($compeltion['media']==1){
+    $_SESSION['completion-media'] = 1;
+}
+if ($compeltion['animations']==1){
+    $_SESSION['completion-flexbox'] = 1;
+}
+if ($compeltion['text']==1){
+    $_SESSION['completion-effects'] = 1;
+}
+
+
+
+
 header('Location:../index.php');
 
 function hash_pass($password, $salt){
     $hash = crypt($password,$salt);
     return $hash;
+}
+
+function get_completion($conn, $username){
+    $query = "SELECT * FROM progress where username='$username'";
+    mysqli_query($conn, $query);
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            $data=array("username"=>$row["username"],"flexbox"=> $row["flexbox"],"text"=> $row["text"],"media"=> $row["media"],"animations"=> $row["animations"]);
+        }
+        return $data;
 }
 
 
