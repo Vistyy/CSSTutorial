@@ -30,7 +30,6 @@
             <ul class="main-nav" id="main-nav">
               <?php
             if(isset($_SESSION['username'])){
-                echo $_SESSION['username'];
                 ?>
               <li class="nav-btn"><a class="navbar-username">
                 <?php 
