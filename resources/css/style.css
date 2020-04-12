@@ -1232,7 +1232,6 @@ footer {
   -webkit-box-pack: center;
   justify-content: center;
   text-align: center;
-  margin-left: 20px;
 }
 
 .example-flex1,
@@ -1300,12 +1299,12 @@ footer {
 }
 
 .example-code {
-  width: 50%;
-  height: auto;
+  width: 400px;
+  height: 100%;
   display: -webkit-inline-box;
   display: inline-flex;
-  padding-right: 30px;
-  padding-bottom: 30px;
+  margin-right: 80px;
+  margin-bottom: 50px;
 }
 .middle img {
   margin-top: 20px;
@@ -1351,6 +1350,7 @@ footer {
   width: 140px;
   border: 1px solid #000000;
   word-break: break-all;
+  margin-bottom: 30px;
 }
 .wordwrapping1 {
   width: 11em;
@@ -1360,6 +1360,7 @@ footer {
   width: 11em;
   border: 1px solid #000000;
   word-wrap: break-word;
+  margin-bottom: 30px;
 }
 .writingmode1 {
   -webkit-writing-mode: horizontal-tb;
@@ -1374,4 +1375,34 @@ footer {
 .flexmodel {
   display: -webkit-box;
   display: flex;
+}
+
+
+
+/*/////////////////////////////////////
+    Template JS
+///////////////////////////////////////*/
+.template{
+    margin: 5%;
+    align-content:center;
+}
+.template h2{
+    font-size: 40px;
+    font-weight: bold;
+
+}
+.template h3 {
+    font-size: 30px;
+    font-weight: 400;
+}
+.template p{
+    padding-top:30px;
+    padding-bottom: 30px;
+
+}
+.template img{
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    width: 40%;
 }
