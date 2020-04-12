@@ -105,6 +105,7 @@
                     echo "<br>";
                     echo $row['text'];
                 }
+            }
               ?>
           </div>
         </div>
