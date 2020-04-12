@@ -1,5 +1,8 @@
 <?php
             session_start();
+            // if(!isset($_SESSION['username'])){
+            //     header('Location:../../index.php');
+            // }
             ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,14 +77,16 @@
               <h3><?php echo $_SESSION['username'];?> </h3>
             </div>
             <div class="comment-block">
+                <form action="../add-note.php" method="post" id='noteform' ></form>
               <textarea
                 name="comment"
                 id="comment"
                 cols="60"
                 rows="10"
                 draggable="false"
+                form = 'noteform'
               ></textarea>
-              <input type="submit" class="submit" />
+              <input type="submit" class="submit"  value="Add note" form='noteform'>
             </div>
           </div>
           <div class="notes"></div>
