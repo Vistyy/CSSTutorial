@@ -97,7 +97,7 @@
               $usernamedb = "root";
               $passworddb = "dupa12";
               $conn = new mysqli($servername, $usernamedb, $passworddb, "csstutorial");
-              $query = "SELECT * FROM notes WHERE username=$username";
+              $query = "SELECT * FROM notes WHERE username='$username'";
               $result=mysqli_query($conn, $query);
               if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()) {
