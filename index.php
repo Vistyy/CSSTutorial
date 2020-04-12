@@ -32,7 +32,6 @@
             if(isset($_SESSION['username'])){
                 echo $_SESSION['username'];
                 ?>
-              <li class="nav-btn"><a class="navbar-username">username</a></li>
               <li class="nav-btn">
                 <a class="logout-btn" href="resources/sign-out.php">Log Out</a>
               </li>
