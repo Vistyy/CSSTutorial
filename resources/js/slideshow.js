@@ -349,6 +349,7 @@ const markupTextEffects = `
                   <br>
               </div>
               <p>Both boxes contain <b>div:hover {overflow:visible}</b> to see entire text.</p>
+              <img scr="https://i.stack.imgur.com/dazPw.jpg"/>
       </div>
   </div>
   
