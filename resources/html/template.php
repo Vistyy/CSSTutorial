@@ -1,9 +1,6 @@
 <?php
             session_start();
-            if(!isset($_SESSION['username'])){
-                header('Location:../../index.php');
-            }
-            ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -39,18 +36,16 @@
         <header>
           <nav class="clearfix">
             <ul class="main-nav" id="main-nav">
-              <?php
+            <?php
             if(isset($_SESSION['username'])){
                 ?>
-              <li class="nav-btn">
-                <a class="navbar-username" href="../html/profile.php">
-                  <?php 
+              <li class="nav-btn"><a class="navbar-username"  href="./resources/html/profile.php"> 
+                <?php 
                 echo $_SESSION['username']
                 ?>
-                </a>
-              </li>
+                </a></li>
               <li class="nav-btn">
-                <a class="logout-btn" href="../sign-out.php">Log Out</a>
+                <a class="logout-btn" href="resources/sign-out.php">Log Out</a>
               </li>
               <?php
             }else{
@@ -72,45 +67,6 @@
             >
           </div>
         </header>
-        <div class="profile-container clearfix">
-          <div class="profile">
-            <div>
-              <img src="./../img/placeholder.png" alt="Profile Image" />
-              <h3><?php echo $_SESSION['username'];?></h3>
-            </div>
-            <div class="comment-block">
-              <form action="../add-note.php" method="post" id="noteform"></form>
-              <textarea
-                name="comment"
-                id="comment"
-                cols="60"
-                rows="10"
-                draggable="false"
-                form="noteform"
-              ></textarea>
-              <input
-                type="submit"
-                class="submit"
-                value="Add note"
-                form="noteform"
-              />
-            </div>
-          </div>
-          <div class="notes">
-            <?php
-              $username=$_SESSION['username'];
-              $text = $_POST['comment'];
-              $servername = "172.17.0.3";
-              $usernamedb = "root";
-              $passworddb = "dupa12";
-              $conn = new mysqli($servername, $usernamedb, $passworddb, "csstutorial");
-              $query = "SELECT date, text FROM notes WHERE username='$username' ORDER BY date DESC ";
-              $result=mysqli_query($conn, $query);
-              if ($result->num_rows > 0) { while($row = $result->fetch_assoc())
-            { echo $row['date']; echo "<br />"; echo $row['text']; echo "<br />";
-            } } ?>
-          </div>
-        </div>
       </div>
       <footer>stuff to type in here, copyrightedtm</footer>
     </div>
@@ -118,7 +74,7 @@
       <i class="fa fa-times" onclick="test('signin')"></i>
       <h3>sign in</h3>
       <form
-        action="../sign-in.php"
+        action="resources/sign-in.php"
         method="post"
         id="signinform"
         class="clearfix"
@@ -152,11 +108,11 @@
         </div>
       </form>
     </div>
-    <div class="signupcollapsed" id="signup-window">
+    <div class="signupcollapsed" class="submit" id="signup-window">
       <i class="fa fa-times" onclick="test('signup')"></i>
       <h3>sign up</h3>
       <form
-        action="../sign-up.php"
+        action="resources/sign-up.php"
         method="post"
         id="signupform"
         class="clearfix"
@@ -193,7 +149,6 @@
           <input
             type="submit"
             value="sign up"
-            class="submit"
             id="signup-submit"
             onclick="submit()"
           />
