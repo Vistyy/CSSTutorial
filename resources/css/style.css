@@ -579,17 +579,23 @@ header {
   border-radius: 3px 0 0 3px;
 }
 
-.slideshow-window::-webkit-scrollbar {
+.slideshow-window::-webkit-scrollbar,
+.notes::-webkit-scrollbar,
+#comment::-webkit-scrollbar {
   width: 10px;
   position: fixed;
 }
-.slideshow-window::-webkit-scrollbar-track {
+.slideshow-window::-webkit-scrollbar-track,
+.notes::-webkit-scrollbar-track,
+#comment::-webkit-scrollbar-track {
   background: #eee;
   border-radius: 5px;
   margin-top: 1px;
   margin-bottom: 1px;
 }
-.slideshow-window::-webkit-scrollbar-thumb {
+.slideshow-window::-webkit-scrollbar-thumb,
+.notes::-webkit-scrollbar-thumb,
+#comment::-webkit-scrollbar-thumb {
   background: #888;
   height: 20px;
   border-radius: 10px;
@@ -656,6 +662,9 @@ header {
   border: 2px solid rgb(8, 100, 153);
   border-radius: 5px;
   float: right;
+  overflow: scroll;
+  overflow-wrap: normal;
+  overflow-x: hidden;
 }
 
 .profile {
@@ -1375,36 +1384,32 @@ footer {
   display: flex;
 }
 
-
-
 /*/////////////////////////////////////
     Template JS
 ///////////////////////////////////////*/
-.template{
-    margin: 5%;
-    align-content:center;
+.template {
+  margin: 5%;
+  align-content: center;
 }
-.template h2{
-    font-size: 40px;
-    font-weight: bold;
-
+.template h2 {
+  font-size: 40px;
+  font-weight: bold;
 }
 .template h3 {
-    font-size: 30px;
-    font-weight: 400;
+  font-size: 30px;
+  font-weight: 400;
 }
-.template p{
-    padding-top:30px;
-    padding-bottom: 30px;
+.template p {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.template img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
 
-}
-.template img{
-    display: block;
-    margin-left:auto;
-    margin-right: auto;
-    width: 40%;
-}
-
-.middle img{
+.middle img {
   width: 80%;
 }

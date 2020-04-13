@@ -39,14 +39,16 @@
         <header>
           <nav class="clearfix">
             <ul class="main-nav" id="main-nav">
-            <?php
+              <?php
             if(isset($_SESSION['username'])){
                 ?>
-              <li class="nav-btn"><a class="navbar-username"  href="../html/profile.php"> 
-                <?php 
+              <li class="nav-btn">
+                <a class="navbar-username" href="../html/profile.php">
+                  <?php 
                 echo $_SESSION['username']
                 ?>
-                </a></li>
+                </a>
+              </li>
               <li class="nav-btn">
                 <a class="logout-btn" href="../sign-out.php">Log Out</a>
               </li>
@@ -74,10 +76,10 @@
           <div class="profile">
             <div>
               <img src="./../img/placeholder.png" alt="Profile Image" />
-              <h3><?php echo $_SESSION['username'];?> </h3>
+              <h3><?php echo $_SESSION['username'];?></h3>
             </div>
             <div class="comment-block">
-                <form action="../add-note.php" method="post" id='noteform' ></form>
+              <form action="../add-note.php" method="post" id="noteform"></form>
               <textarea
                 name="comment"
                 id="comment"
@@ -86,11 +88,16 @@
                 draggable="false"
                 form="noteform"
               ></textarea>
-              <input type="submit" class="submit"  value="Add note" form="noteform">
+              <input
+                type="submit"
+                class="submit"
+                value="Add note"
+                form="noteform"
+              />
             </div>
           </div>
           <div class="notes">
-              <?php
+            <?php
               $username=$_SESSION['username'];
               $text = $_POST['comment'];
               $servername = "172.17.0.3";
@@ -99,15 +106,9 @@
               $conn = new mysqli($servername, $usernamedb, $passworddb, "csstutorial");
               $query = "SELECT * FROM notes WHERE username='$username' ORDER BY date DESC ";
               $result=mysqli_query($conn, $query);
-              if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()) {
-                    echo $row['date'];
-                    echo "<br>";
-                    echo $row['text'];
-                    echo "<br>";
-                }
-            }
-              ?>
+              if ($result->num_rows > 0) { while($row = $result->fetch_assoc())
+            { echo $row['date']; echo "<br />"; echo $row['text']; echo "<br />";
+            } } ?>
           </div>
         </div>
       </div>
