@@ -302,14 +302,11 @@ const markupMediaQueries = `
               
           </div>
              <img src="https://i0.wp.com/www.silocreativo.com/en/wp-content/uploads/2016/12/media-query-css.png?resize=666%2C500&quality=100&strip=all&ssl=1"/>
+             <img src="https://www.solodev.com/core/fileparse.php/131/urlt/media-queries-blog.jpg"/>
       </div>
   
-  </div>
+  </div>`;
 
-  <div class="slides">
-      <div class="middle"> 
-          <img src="https://www.solodev.com/core/fileparse.php/131/urlt/media-queries-blog.jpg"/>
-      </div>`;
 const markupTextEffects = `
   <div class="slides">
       <div class="middle"/>
@@ -326,6 +323,7 @@ const markupTextEffects = `
              -writing-mode
               </code>
           </p>  
+        <img src="https://s25031.pcdn.co/wp-content/uploads/2015/04/css-text-effects3.jpg"/>
       </div>       
   </div>
   
