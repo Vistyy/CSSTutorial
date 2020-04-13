@@ -31,7 +31,7 @@
       rel="stylesheet"
     />
 
-    <title>Programming tutorial</title>
+    <title>Profile</title>
   </head>
   <body>
     <div class="main-container" id="main-container" onclick="outsidePopUp()">
