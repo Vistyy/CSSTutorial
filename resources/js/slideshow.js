@@ -46,7 +46,7 @@ const markupAnimations = `
             These keyframes can then be controlled either by the shorthand animation property,
             or its eight sub-properties, to give more control over how those keyframes should be manipulated.
         </p>  
-       
+        <img src="https://hackernoon.com/drafts/x84g2geg.png"/>
       </div>
   </div>
   <div class="slides">
@@ -267,6 +267,10 @@ const markupFlexbox = `
                           <div class="example-flex4">4
                           </div>
                       </div>
+                  
+                     <img src="https://sharkcoder.com/files/article/flex1.png"/>
+                     <img src="https://www.w3.org/TR/css3-flexbox/images/flex-pack.svg"/>
+
                   </div>
           
       
@@ -301,9 +305,12 @@ const markupMediaQueries = `
                 In this case  if this window would be smaller than 600px its background color will change to blue.
               
           </div>
+             <img src="https://i0.wp.com/www.silocreativo.com/en/wp-content/uploads/2016/12/media-query-css.png?resize=666%2C500&quality=100&strip=all&ssl=1"/>
+             <img src="https://www.solodev.com/core/fileparse.php/131/urlt/media-queries-blog.jpg"/>
       </div>
   
   </div>`;
+
 const markupTextEffects = `
   <div class="slides">
       <div class="middle"/>
@@ -320,6 +327,7 @@ const markupTextEffects = `
              -writing-mode
               </code>
           </p>  
+        <img src="https://s25031.pcdn.co/wp-content/uploads/2015/04/css-text-effects3.jpg"/>
       </div>       
   </div>
   
@@ -341,6 +349,7 @@ const markupTextEffects = `
                   <br>
               </div>
               <p>Both boxes contain <b>div:hover {overflow:visible}</b> to see entire text.</p>
+              <img scr="https://i.stack.imgur.com/dazPw.jpg"/>
       </div>
   </div>
   
@@ -395,6 +404,15 @@ const markupTextEffects = `
               </div>
            </div> 
           
+      </div>
+  </div>
+
+    <div class="slides">
+      <div class="middle">
+        <p>Adding JS could do much more and stunning things</p>
+        <img src="https://freefrontend.com/assets/img/css-text-effects/3d-text-effect-mousemove.png"/>
+        <img src="https://webdevtrick.com/wp-content/uploads/css-neon-text-effect.jpg"/>
+        <img src="https://s25031.pcdn.co/wp-content/uploads/2017/03/Screen-Shot-2017-03-07-at-11.25.45-AM-1024x282.png"/>
       </div>
   </div>
   

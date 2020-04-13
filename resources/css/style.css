@@ -1404,3 +1404,7 @@ footer {
     margin-right: auto;
     width: 40%;
 }
+
+.middle img{
+  width: 80%;
+}
