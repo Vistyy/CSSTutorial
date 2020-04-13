@@ -36,14 +36,16 @@
         <header>
           <nav class="clearfix">
             <ul class="main-nav" id="main-nav">
-            <?php
+              <?php
             if(isset($_SESSION['username'])){
                 ?>
-              <li class="nav-btn"><a class="navbar-username"  href="./resources/html/profile.php"> 
-                <?php 
+              <li class="nav-btn">
+                <a class="navbar-username" href="./resources/html/profile.php">
+                  <?php 
                 echo $_SESSION['username']
                 ?>
-                </a></li>
+                </a>
+              </li>
               <li class="nav-btn">
                 <a class="logout-btn" href="resources/sign-out.php">Log Out</a>
               </li>
@@ -68,7 +70,58 @@
           </div>
         </header>
       </div>
-      <footer>stuff to type in here, copyrightedtm</footer>
+      <footer>
+        <div class="external-tutorials">
+          <ul>
+            <li style="font-weight: 400;">W3Schools Tutorials:</li>
+            <li>
+              <a
+                href="https://www.w3schools.com/css/css3_animations.asp"
+                target="_blank"
+                >Animations</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3schools.com/css/css3_flexbox.asp"
+                target="_blank"
+                >Flexbox</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp"
+                target="_blank"
+                >Media Queries</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3schools.com/css/css3_text_effects.asp"
+                target="_blank"
+                >Text Effects</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/Vistyy/CSSTutorial" target="_blank"
+            ><i class="fa fa-github-square" id="github"></i
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fa fa-facebook-square" id="facebook"></i
+          ></a>
+          <a href="https://www.linkedin.com/" target="_blank"
+            ><i class="fa fa-linkedin-square" id="linkedin"></i
+          ></a>
+          <a href="https://twitter.com" target="_blank"
+            ><i class="fa fa-twitter-square" id="twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fa fa-instagram" id="instagram"></i
+          ></a>
+        </div>
+      </footer>
     </div>
     <div class="signincollapsed" id="signin-window">
       <i class="fa fa-times" onclick="test('signin')"></i>

@@ -14,7 +14,7 @@
     />
     <script src="resources/js/windows.js"></script>
     <script src="resources/js/slideshow.js"></script>
-    <script src="resources/js/replaceTemplate.js"></script>
+    <script src="resources/js/replaceTemplate.js</script>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap"
       rel="stylesheet"
@@ -94,7 +94,7 @@
               <!--  -->
               <a
                 class="external"
-                href="./resources/html/template.html?tutorial=animations"
+                href="./resources/html/template.php?tutorial=animations"
                 ><i class="fa fa-external-link"></i
               ></a>
             </li>
@@ -122,7 +122,7 @@
               <!--  -->
               <a
                 class="external"
-                href="./resources/html/template.html?tutorial=flexbox"
+                href="./resources/html/template.php?tutorial=flexbox"
                 ><i class="fa fa-external-link"></i
               ></a>
             </li>
@@ -146,7 +146,7 @@
               <!--  -->
               <a
                 class="external"
-                href="./resources/html/template.html?tutorial=mediaqueries"
+                href="./resources/html/template.php?tutorial=mediaqueries"
                 ><i class="fa fa-external-link"></i
               ></a>
             </li>
@@ -169,14 +169,65 @@
               <!--  -->
               <a
                 class="external"
-                href="./resources/html/template.html?tutorial=texteffects"
+                href="./resources/html/template.php?tutorial=texteffects"
                 ><i class="fa fa-external-link"></i
               ></a>
             </li>
           </ul>
         </div>
       </div>
-      <footer>stuff to type in here, copyrightedtm</footer>
+      <footer>
+        <div class="external-tutorials">
+          <ul>
+            <li style="font-weight: 400;">W3Schools Tutorials:</li>
+            <li>
+              <a
+                href="https://www.w3schools.com/css/css3_animations.asp"
+                target="_blank"
+                >Animations</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3schools.com/css/css3_flexbox.asp"
+                target="_blank"
+                >Flexbox</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3schools.com/css/css_rwd_mediaqueries.asp"
+                target="_blank"
+                >Media Queries</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.w3schools.com/css/css3_text_effects.asp"
+                target="_blank"
+                >Text Effects</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/Vistyy/CSSTutorial" target="_blank"
+            ><i class="fa fa-github-square" id="github"></i
+          ></a>
+          <a href="https://www.facebook.com/" target="_blank"
+            ><i class="fa fa-facebook-square" id="facebook"></i
+          ></a>
+          <a href="https://www.linkedin.com/" target="_blank"
+            ><i class="fa fa-linkedin-square" id="linkedin"></i
+          ></a>
+          <a href="https://twitter.com" target="_blank"
+            ><i class="fa fa-twitter-square" id="twitter"></i
+          ></a>
+          <a href="https://www.instagram.com/" target="_blank"
+            ><i class="fa fa-instagram" id="instagram"></i
+          ></a>
+        </div>
+      </footer>
     </div>
     <div class="collapsed slideshow-container" id="slideshow-container">
       <div class="slideshow-window" id="slideshow-window"></div>

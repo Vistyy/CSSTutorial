@@ -1058,7 +1058,7 @@ header {
 
 footer {
   background-color: #333;
-  color: #aaa;
+  color: #ccc;
   height: 4rem;
   padding: 1.5rem;
   font-size: 80%;
@@ -1067,6 +1067,56 @@ footer {
   width: 100%;
 }
 
+.external-tutorials {
+  float: left;
+  margin-left: 5%;
+}
+
+.external-tutorials li {
+  list-style: none;
+  display: inline-block;
+  padding-left: 20px;
+}
+
+.external-tutorials a {
+  text-decoration: none;
+  color: #ccc;
+  transition: color 0.2s;
+}
+.external-tutorials a:hover {
+  color: #fff;
+}
+
+.social-links {
+  float: right;
+  margin-right: 5%;
+}
+
+.social-links i {
+  font-size: 150%;
+  color: #bbb;
+  padding-right: 10px;
+  transition: color 0.2s;
+}
+#github:hover {
+  color: #fff;
+}
+
+#facebook:hover {
+  color: #1778f2;
+}
+
+#linkedin:hover {
+  color: #006192;
+}
+
+#twitter:hover {
+  color: #1da1f2;
+}
+
+#instagram:hover {
+  color: #dd2a7b;
+}
 /*Modal 
 .slideshow-container{
     display:flex;
