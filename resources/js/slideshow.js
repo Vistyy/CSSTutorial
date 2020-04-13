@@ -267,6 +267,10 @@ const markupFlexbox = `
                           <div class="example-flex4">4
                           </div>
                       </div>
+                  
+                     <img src="https://sharkcoder.com/files/article/flex1.png"/>
+                     <img src="https://www.w3.org/TR/css3-flexbox/images/flex-pack.svg"/>
+
                   </div>
           
       
