@@ -14,7 +14,7 @@
     />
     <script src="resources/js/windows.js"></script>
     <script src="resources/js/slideshow.js"></script>
-    <script src="resources/js/replaceTemplate.js"</script>
+    <script src="resources/js/replaceTemplate.js"></script>
     <link
       href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap"
       rel="stylesheet"
