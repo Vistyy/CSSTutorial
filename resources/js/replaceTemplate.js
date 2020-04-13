@@ -347,6 +347,21 @@ const templateTexteffects = `
         </div>
      </div> 
 
+    <p>List of links to used images: <br>
+    https://i.stack.imgur.com/dazPw.jpg <br>
+    https://hackernoon.com/drafts/x84g2geg.png <br>
+    https://www.tutorialrepublic.com/lib/images/flexbox-illustration.png <br>
+    https://sharkcoder.com/files/article/flex1.png <br>
+    https://www.w3.org/TR/css3-flexbox/images/flex-pack.svg <br>
+    https://miro.medium.com/max/654/1*F2QXUmXXjE1kG_5Bb770Hg.png <br>
+    https://i0.wp.com/www.silocreativo.com/en/wp-content/uploads/2016/12/media-query-css.png?resize=666%2C500&quality=100&strip=all&ssl=1 <br>
+    https://www.solodev.com/core/fileparse.php/131/urlt/media-queries-blog.jpg <br>
+    https://s25031.pcdn.co/wp-content/uploads/2015/04/css-text-effects3.jpg
+    https://freefrontend.com/assets/img/css-text-effects/3d-text-effect-mousemove.png <br>
+    https://webdevtrick.com/wp-content/uploads/css-neon-text-effect.jpg <br>
+    https://s25031.pcdn.co/wp-content/uploads/2017/03/Screen-Shot-2017-03-07-at-11.25.45-AM-1024x282.png <br>
+
+
 
 </div>
 `;
