@@ -40,14 +40,14 @@
             if(isset($_SESSION['username'])){
                 ?>
               <li class="nav-btn">
-                <a class="navbar-username" href="./profile.php">
+                <a class="navbar-username" href="./resources/html/profile.php">
                   <?php 
                 echo $_SESSION['username']
                 ?>
                 </a>
               </li>
               <li class="nav-btn">
-                <a class="logout-btn" href="resources/sign-out.php">Log Out</a>
+                <a class="logout-btn" href="./../sign-out.php">Log Out</a>
               </li>
               <?php
             }else{

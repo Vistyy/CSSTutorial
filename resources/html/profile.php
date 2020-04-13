@@ -50,7 +50,7 @@
                 </a>
               </li>
               <li class="nav-btn">
-                <a class="logout-btn" href="../sign-out.php">Log Out</a>
+                <a class="logout-btn" href="./../sign-out.php">Log Out</a>
               </li>
               <?php
             }else{
